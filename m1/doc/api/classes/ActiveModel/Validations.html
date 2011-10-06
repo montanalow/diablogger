@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: ActiveModel::Validations [Rails Framework Documentation]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }<\/style>" )
+
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">ActiveModel::Validations</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/acceptance_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/acceptance.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/confirmation_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/confirmation.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/exclusion_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/exclusion.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/format_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/format.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/inclusion_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/inclusion.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/length_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/length.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/numericality_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/numericality.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/presence_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/presence.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/validates_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/validates.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/with_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations/with.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations.rb
+
+                </a>
+
+
+        <br />
+
+            </td>
+        </tr>
+
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Provides a full validation framework to your objects.
+</p>
+<p>
+A minimal implementation could be:
+</p>
+<pre>
+  class Person
+    include ActiveModel::Validations
+
+    attr_accessor :first_name, :last_name
+
+    validates_each :first_name, :last_name do |record, attr, value|
+      record.errors.add attr, 'starts with z.' if value.to_s[0] == ?z
+    end
+  end
+</pre>
+<p>
+Which provides you with the full standard validation stack that you know
+from ActiveRecord.
+</p>
+<pre>
+  person = Person.new
+  person.valid?
+  #=&gt; true
+  person.invalid?
+  #=&gt; false
+  person.first_name = 'zoolander'
+  person.valid?
+  #=&gt; false
+  person.invalid?
+  #=&gt; true
+  person.errors
+  #=&gt; #&lt;OrderedHash {:first_name=&gt;[&quot;starts with z.&quot;]}&gt;
+</pre>
+<p>
+Note that <a href="Validations.html">ActiveModel::Validations</a>
+automatically adds an <tt>errors</tt> method to your instances initialized
+with a new <a href="Errors.html">ActiveModel::Errors</a> object, so there
+is no need for you to add this manually.
+</p>
+
+    </div>
+
+   </div>
+
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+
+        <a href="#M000715">errors</a>&nbsp;&nbsp;
+
+        <a href="#M000717">invalid?</a>&nbsp;&nbsp;
+
+        <a href="#M000716">valid?</a>&nbsp;&nbsp;
+
+      </div>
+    </div>
+
+  </div>
+
+    <!-- if includes -->
+
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+
+        <span class="include-name"><a href="../ActiveSupport/Callbacks.html">ActiveSupport::Callbacks</a></span>
+
+      </div>
+    </div>
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="Validations/ClassMethods.html" class="link">ActiveModel::Validations::ClassMethods</a><br />
+Class <a href="Validations/AcceptanceValidator.html" class="link">ActiveModel::Validations::AcceptanceValidator</a><br />
+Class <a href="Validations/ConfirmationValidator.html" class="link">ActiveModel::Validations::ConfirmationValidator</a><br />
+Class <a href="Validations/ExclusionValidator.html" class="link">ActiveModel::Validations::ExclusionValidator</a><br />
+Class <a href="Validations/FormatValidator.html" class="link">ActiveModel::Validations::FormatValidator</a><br />
+Class <a href="Validations/InclusionValidator.html" class="link">ActiveModel::Validations::InclusionValidator</a><br />
+Class <a href="Validations/LengthValidator.html" class="link">ActiveModel::Validations::LengthValidator</a><br />
+Class <a href="Validations/NumericalityValidator.html" class="link">ActiveModel::Validations::NumericalityValidator</a><br />
+Class <a href="Validations/PresenceValidator.html" class="link">ActiveModel::Validations::PresenceValidator</a><br />
+
+    </div>
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+      <table summary="aliases">
+
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">send</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">read_attribute_for_validation</td>
+        </tr>
+
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Hook method defining how an attribute value should be retieved. By default
+this is assumed to be an instance named after the attribute. Override this
+method in subclasses should you need to retrieve the value for a given
+attribute differently e.g.
+
+<pre>
+  class MyClass
+    include ActiveModel::Validations
+
+    def initialize(data = {})
+      @data = data
+    end
+
+    def read_attribute_for_validation(key)
+      @data[key]
+    end
+  end
+</pre>
+</td>
+      </tr>
+
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <!-- if method_list -->
+
+    <div id="methods">
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+
+      <div id="method-M000715" class="method-detail">
+        <a name="M000715"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000715" class="method-signature">
+
+          <span class="method-name">errors</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Returns the <a href="Errors.html">Errors</a> object that holds all
+information about attribute error messages.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000715-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000715-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations.rb, line 145</span>
+145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">errors</span>
+146:       <span class="ruby-ivar">@errors</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Errors</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+147:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000717" class="method-detail">
+        <a name="M000717"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000717" class="method-signature">
+
+          <span class="method-name">invalid?</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Performs the opposite of <tt>valid?</tt>. Returns true if errors were
+added, false otherwise.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000717-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000717-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations.rb, line 157</span>
+157:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">invalid?</span>
+158:       <span class="ruby-operator">!</span><span class="ruby-identifier">valid?</span>
+159:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000716" class="method-detail">
+        <a name="M000716"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000716" class="method-signature">
+
+          <span class="method-name">valid?</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Runs all the specified validations and returns true if no errors were added
+otherwise false.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000716-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000716-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activemodel/lib/active_model/validations.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">valid?</span>
+151:       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">clear</span>
+152:       <span class="ruby-identifier">_run_validate_callbacks</span>
+153:       <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">empty?</span>
+154:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

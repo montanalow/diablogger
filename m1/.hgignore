@@ -1,0 +1,7 @@
+^diablogger_development\.db$
+^diablogger_test\.db$
+^diablogger_production\.db$
+^log/test\.log$
+^log/server\.log$
+^log/production\.log$
+^log/development\.log$

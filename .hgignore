@@ -1,0 +1,3 @@
+^diablogger_development\.db$
+^diablogger_test\.db$
+^diablogger_production\.db$

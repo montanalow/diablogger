@@ -1,0 +1,2583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--
+
+    Methods [Rails Framework Documentation]
+
+  -->
+<head>
+  <title>Methods [Rails Framework Documentation]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div class="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000933">+ (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001115">+ (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001199">+ (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001120">+ (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001200">- (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001121">- (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/Time.html#M000128">- (Time)</a><br />
+
+    <a href="classes/ActionView/OutputBuffer.html#M000638"><< (ActionView::OutputBuffer)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001114"><< (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000533"><< (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/DateTime.html#M000028"><=> (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000132"><=> (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001224"><=> (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001193"><=> (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000932"><=> (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/FileSystemResolver.html#M000648">== (ActionView::FileSystemResolver)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001122">== (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/Time.html#M000080">=== (Time)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/UnicodeDatabase.html#M000973">=== (ActiveSupport::Multibyte::UnicodeDatabase)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001225">=~ (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000934">=~ (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000753">[] (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics.html#M001021">[] (ActiveSupport::Testing::Metrics)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000518">[] (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000951">[] (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001241">[] (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/OrderedOptions.html#M001156">[] (ActiveSupport::OrderedOptions)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000755">[]= (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000940">[]= (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001130">[]= (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveSupport/OrderedOptions.html#M001155">[]= (ActiveSupport::OrderedOptions)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/ProxyTestResult.html#M001062">__replay__ (ActiveSupport::Testing::ProxyTestResult)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000854">_compile_per_key_options (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/Time.html#M000143">_dump (Time)</a><br />
+
+    <a href="classes/Time.html#M000148">_dump (Time)</a><br />
+
+    <a href="classes/Time.html#M000144">_dump_without_utc_flag (Time)</a><br />
+
+    <a href="classes/Time.html#M000147">_dump_without_zone (Time)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000186">_handle_method_missing (ActionController::Compatibility)</a><br />
+
+    <a href="classes/Time.html#M000141">_load (Time)</a><br />
+
+    <a href="classes/Time.html#M000145">_load (Time)</a><br />
+
+    <a href="classes/Time.html#M000142">_load_without_utc_flag (Time)</a><br />
+
+    <a href="classes/Time.html#M000146">_load_without_zone (Time)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000184">_normalize_options (ActionController::Compatibility)</a><br />
+
+    <a href="classes/BigDecimal.html#M000005">_original_to_s (BigDecimal)</a><br />
+
+    <a href="classes/ActionController/UrlFor.html#M000270">_router (ActionController::UrlFor)</a><br />
+
+    <a href="classes/ActionController/Caching/Actions.html#M000164">_save_fragment (ActionController::Caching::Actions)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000852">_update_filter (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActionController/Renderers/ClassMethods.html#M000244">_write_render_options (ActionController::Renderers::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Renderers/All.html#M000247">_write_render_options (ActionController::Renderers::All)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000346">action (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/HideActions/ClassMethods.html#M000202">action_methods (ActionController::HideActions::ClassMethods)</a><br />
+
+    <a href="classes/Object.html#M000053">acts_like? (Object)</a><br />
+
+    <a href="classes/DateTime.html#M000006">acts_like_date? (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000929">acts_like_string? (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/DateTime.html#M000007">acts_like_time? (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000079">acts_like_time? (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001212">acts_like_time? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000762">add (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActionController/Renderers.html#M000243">add (ActionController::Renderers)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001105">add (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/ProxyTestResult.html#M001061">add_error (ActiveSupport::Testing::ProxyTestResult)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Erubis.html#M000630">add_expr_escaped (ActionView::Template::Handlers::Erubis)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Erubis.html#M000628">add_expr_literal (ActionView::Template::Handlers::Erubis)</a><br />
+
+    <a href="classes/ActiveSupport/BacktraceCleaner.html#M001098">add_filter (ActiveSupport::BacktraceCleaner)</a><br />
+
+    <a href="classes/ActiveSupport/Dependencies/WatchStack.html#M000876">add_modules (ActiveSupport::Dependencies::WatchStack)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000701">add_observer (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000764">add_on_blank (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000763">add_on_empty (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Erubis.html#M000631">add_postamble (ActionView::Template::Handlers::Erubis)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Erubis.html#M000626">add_preamble (ActionView::Template::Handlers::Erubis)</a><br />
+
+    <a href="classes/ActiveSupport/BacktraceCleaner.html#M001099">add_silencer (ActiveSupport::BacktraceCleaner)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Erubis.html#M000629">add_stmt (ActionView::Template::Handlers::Erubis)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Erubis.html#M000627">add_text (ActionView::Template::Handlers::Erubis)</a><br />
+
+    <a href="classes/ActiveModel/DeprecatedErrorMethods.html#M000683">add_to_base (ActiveModel::DeprecatedErrorMethods)</a><br />
+
+    <a href="classes/DateTime.html#M000014">advance (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001203">advance (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000090">advance (Time)</a><br />
+
+    <a href="classes/ActionController/Dispatcher.html#M000314">after_dispatch (ActionController::Dispatcher)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001202">ago (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001125">ago (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/Time.html#M000091">ago (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000015">ago (DateTime)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000528">alert (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000667">alias_attribute (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001240">all (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000297">allow_concurrency (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000298">allow_concurrency= (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection/ClassMethods.html#M000261">allow_forgery_protection (ActionController::RequestForgeryProtection::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000251">allow_forgery_protection (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000252">allow_forgery_protection= (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection/ClassMethods.html#M000262">allow_forgery_protection= (ActionController::RequestForgeryProtection::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000323">api_behavior (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionView/OutputBuffer.html#M000639">append= (ActionView::OutputBuffer)</a><br />
+
+    <a href="classes/ActiveSupport/Concern.html#M000860">append_features (ActiveSupport::Concern)</a><br />
+
+    <a href="classes/ActionView/OutputBuffer.html#M000640">append_if_string= (ActionView::OutputBuffer)</a><br />
+
+    <a href="classes/Rails.html#M001265">application (Rails)</a><br />
+
+    <a href="classes/Rails.html#M001266">application= (Rails)</a><br />
+
+    <a href="classes/ActionView/Helpers/ScriptaculousHelper.html#M000553">array_or_string_for_javascript (ActionView::Helpers::ScriptaculousHelper)</a><br />
+
+    <a href="classes/ActiveModel/Serializers/JSON.html#M000707">as_json (ActiveModel::Serializers::JSON)</a><br />
+
+    <a href="classes/Object.html#M000066">as_json (Object)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001185">as_json (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Variable.html#M000916">as_json (ActiveSupport::JSON::Variable)</a><br />
+
+    <a href="classes/Enumerable.html#M001249">as_json (Enumerable)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Assertions.html#M001009">assert_blank (ActiveSupport::Testing::Assertions)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Assertions.html#M001007">assert_difference (ActiveSupport::Testing::Assertions)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Assertions.html#M001008">assert_no_difference (ActiveSupport::Testing::Assertions)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Assertions.html#M001010">assert_present (ActiveSupport::Testing::Assertions)</a><br />
+
+    <a href="classes/ActionController/TemplateAssertions.html#M000288">assert_template (ActionController::TemplateAssertions)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000532">assign (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000183">assign_shortcuts (ActionController::Compatibility)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001228">at (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/DateTime.html#M000021">at_beginning_of_day (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000111">at_beginning_of_day (Time)</a><br />
+
+    <a href="classes/Time.html#M000114">at_beginning_of_month (Time)</a><br />
+
+    <a href="classes/Time.html#M000118">at_beginning_of_quarter (Time)</a><br />
+
+    <a href="classes/Time.html#M000104">at_beginning_of_week (Time)</a><br />
+
+    <a href="classes/Time.html#M000122">at_beginning_of_year (Time)</a><br />
+
+    <a href="classes/Time.html#M000116">at_end_of_month (Time)</a><br />
+
+    <a href="classes/Time.html#M000120">at_end_of_quarter (Time)</a><br />
+
+    <a href="classes/Time.html#M000106">at_end_of_week (Time)</a><br />
+
+    <a href="classes/Time.html#M000124">at_end_of_year (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000020">at_midnight (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000110">at_midnight (Time)</a><br />
+
+    <a href="classes/ActionView/Helpers/AtomFeedHelper.html#M000423">atom_feed (ActionView::Helpers::AtomFeedHelper)</a><br />
+
+    <a href="classes/File.html#M000044">atomic_write (File)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000159">attachments (ActionMailer::Base)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000393">attribute_match (HTML::Selector)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods.html#M000662">attribute_method? (ActiveModel::AttributeMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000666">attribute_method_affix (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000664">attribute_method_prefix (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000665">attribute_method_suffix (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000670">attribute_methods_generated? (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000416">audio_path (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000420">audio_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic.html#M000203">authenticate (ActionController::HttpAuthentication::Basic)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000211">authenticate (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic/ControllerMethods.html#M000208">authenticate_or_request_with_http_basic (ActionController::HttpAuthentication::Basic::ControllerMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest/ControllerMethods.html#M000224">authenticate_or_request_with_http_digest (ActionController::HttpAuthentication::Digest::ControllerMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic/ControllerMethods.html#M000209">authenticate_with_http_basic (ActionController::HttpAuthentication::Basic::ControllerMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest/ControllerMethods.html#M000225">authenticate_with_http_digest (ActionController::HttpAuthentication::Digest::ControllerMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000218">authentication_header (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic.html#M000207">authentication_request (ActionController::HttpAuthentication::Basic)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000219">authentication_request (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000401">auto_discovery_link_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001109">auto_flush (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001106">auto_flushing= (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000569">auto_link (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Autoload.html#M000866">autoload (ActiveSupport::Autoload)</a><br />
+
+    <a href="classes/ActiveSupport/Autoload.html#M000868">autoload_at (ActiveSupport::Autoload)</a><br />
+
+    <a href="classes/ActiveSupport/Autoload.html#M000867">autoload_under (ActiveSupport::Autoload)</a><br />
+
+    <a href="classes/ActiveSupport/Autoload.html#M000871">autoloads (ActiveSupport::Autoload)</a><br />
+
+    <a href="classes/ActiveSupport/JSON.html#M000905">backend (ActiveSupport::JSON)</a><br />
+
+    <a href="classes/ActiveSupport/JSON.html#M000906">backend= (ActiveSupport::JSON)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini.html#M001094">backend= (ActiveSupport::XmlMini)</a><br />
+
+    <a href="classes/Rails.html#M001273">backtrace_cleaner (Rails)</a><br />
+
+    <a href="classes/ActiveSupport/SecureRandom.html#M000999">base64 (ActiveSupport::SecureRandom)</a><br />
+
+    <a href="classes/ActionController/Dispatcher.html#M000313">before_dispatch (ActionController::Dispatcher)</a><br />
+
+    <a href="classes/ActionController/Testing/ClassMethods.html#M000268">before_filters (ActionController::Testing::ClassMethods)</a><br />
+
+    <a href="classes/DateTime.html#M000018">beginning_of_day (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000108">beginning_of_day (Time)</a><br />
+
+    <a href="classes/Time.html#M000113">beginning_of_month (Time)</a><br />
+
+    <a href="classes/Time.html#M000117">beginning_of_quarter (Time)</a><br />
+
+    <a href="classes/Time.html#M000102">beginning_of_week (Time)</a><br />
+
+    <a href="classes/Time.html#M000121">beginning_of_year (Time)</a><br />
+
+    <a href="classes/ActiveSupport/Benchmarkable.html#M000785">benchmark (ActiveSupport::Benchmarkable)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001026">benchmark (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001194">between? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Fanout.html#M000979">bind (ActiveSupport::Notifications::Fanout)</a><br />
+
+    <a href="classes/Object.html#M000054">blank? (Object)</a><br />
+
+    <a href="classes/Kernel.html#M001251">breakpoint (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001110">buffer (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActionController/Middleware.html#M000348">build (ActionController::Middleware)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000517">build_callbacks (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemCacheStore.html#M000806">build_mem_cache (ActiveSupport::Cache::MemCacheStore)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000580">button_to (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/JavaScriptHelper.html#M000501">button_to_function (ActionView::Helpers::JavaScriptHelper)</a><br />
+
+    <a href="classes/ActionController/Caching.html#M000163">cache (ActionController::Caching)</a><br />
+
+    <a href="classes/ActionView/Helpers/CacheHelper.html#M000428">cache (ActionView::Helpers::CacheHelper)</a><br />
+
+    <a href="classes/Rails.html#M001277">cache (Rails)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000421">cache_asset_timestamps (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000422">cache_asset_timestamps= (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionController/Caching/Pages/ClassMethods.html#M000177">cache_page (ActionController::Caching::Pages::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Caching/Pages.html#M000175">cache_page (ActionController::Caching::Pages)</a><br />
+
+    <a href="classes/ActionController/Caching/ConfigMethods.html#M000179">cache_store (ActionController::Caching::ConfigMethods)</a><br />
+
+    <a href="classes/ActionController/Caching/ConfigMethods.html#M000180">cache_store= (ActionController::Caching::ConfigMethods)</a><br />
+
+    <a href="classes/ActionController/Caching/Actions/ClassMethods.html#M000166">caches_action (ActionController::Caching::Actions::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Caching/Pages/ClassMethods.html#M000178">caches_page (ActionController::Caching::Pages::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Caching.html#M000162">caching_allowed? (ActionController::Caching)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000531">call (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/Logger/Formatter.html#M000070">call (Logger::Formatter)</a><br />
+
+    <a href="classes/Logger/SimpleFormatter.html#M000071">call (Logger::SimpleFormatter)</a><br />
+
+    <a href="classes/ActionView/Template/Handler.html#M000636">call (ActionView::Template::Handler)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000345">call (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000318">call (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Compilable/ClassMethods.html#M000624">call (ActionView::Template::Handlers::Compilable::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Middleware/ActionMiddleware.html#M000353">call (ActionController::Middleware::ActionMiddleware)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000888">camelize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000957">capitalize (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/CaptureHelper.html#M000429">capture (ActionView::Helpers::CaptureHelper)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001093">cdata_block (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActionView/Helpers/TagHelper.html#M000556">cdata_section (ActionView::Helpers::TagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000943">center (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/Time.html#M000089">change (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000013">change (DateTime)</a><br />
+
+    <a href="classes/ActiveModel/Dirty.html#M000687">changed (ActiveModel::Dirty)</a><br />
+
+    <a href="classes/ActiveModel/Dirty.html#M000686">changed? (ActiveModel::Dirty)</a><br />
+
+    <a href="classes/ActiveModel/Dirty.html#M000688">changes (ActiveModel::Dirty)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001092">characters (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000457">check_box (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/InstanceTagMethods/ClassMethods.html#M000468">check_box_checked? (ActionView::Helpers::InstanceTagMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000487">check_box_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveModel/Validations/InclusionValidator.html#M000742">check_validity! (ActiveModel::Validations::InclusionValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/NumericalityValidator.html#M000748">check_validity! (ActiveModel::Validations::NumericalityValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/LengthValidator.html#M000745">check_validity! (ActiveModel::Validations::LengthValidator)</a><br />
+
+    <a href="classes/ActiveModel/EachValidator.html#M000780">check_validity! (ActiveModel::EachValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ExclusionValidator.html#M000738">check_validity! (ActiveModel::Validations::ExclusionValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/FormatValidator.html#M000741">check_validity! (ActiveModel::Validations::FormatValidator)</a><br />
+
+    <a href="classes/Kernel.html#M001259">class_eval (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000887">classify (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveSupport/BacktraceCleaner.html#M001097">clean (ActiveSupport::BacktraceCleaner)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000828">clear (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000818">clear (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000797">clear (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000904">clear (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemCacheStore.html#M000810">clear (ActiveSupport::Cache::MemCacheStore)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001111">clear_buffer (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActionView/Resolver.html#M000642">clear_cache (ActionView::Resolver)</a><br />
+
+    <a href="classes/ActionController/MimeResponds/ClassMethods.html#M000236">clear_respond_to (ActionController::MimeResponds::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000847">clone (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/Gzip/Stream.html#M000880">close (ActiveSupport::Gzip::Stream)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001108">close (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000471">collection_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000596">collection_with_template (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000597">collection_without_template (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001165">comparable_time (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000131">compare_with_coercion (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000027">compare_with_coercion (DateTime)</a><br />
+
+    <a href="classes/DateTime.html#M000029">compare_without_coercion (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000133">compare_without_coercion (Time)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/RJS.html#M000634">compile (ActionView::Template::Handlers::RJS)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Builder.html#M000625">compile (ActionView::Template::Handlers::Builder)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Compilable.html#M000623">compile (ActionView::Template::Handlers::Compilable)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/ERB.html#M000633">compile (ActionView::Template::Handlers::ERB)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/CallbackChain.html#M000858">compile (ActiveSupport::Callbacks::CallbackChain)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000960">compose (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000969">compose_codepoints (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Gzip.html#M000879">compress (ActiveSupport::Gzip)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000558">concat (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001112">concat (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/ActiveSupport/Configurable.html#M000862">config (ActiveSupport::Configurable)</a><br />
+
+    <a href="classes/ActiveSupport/Configurable/ClassMethods.html#M000864">config (ActiveSupport::Configurable::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000650">config (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActiveSupport/Configurable/ClassMethods.html#M000865">config= (ActiveSupport::Configurable::ClassMethods)</a><br />
+
+    <a href="classes/Rails.html#M001267">configuration (Rails)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000295">consider_all_requests_local (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000296">consider_all_requests_local= (ActionController::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000893">constantize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000931">consumes? (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/HTML/WhiteListSanitizer.html#M000384">contains_bad_protocols? (HTML::WhiteListSanitizer)</a><br />
+
+    <a href="classes/ActionView/Helpers/CaptureHelper.html#M000430">content_for (ActionView::Helpers::CaptureHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/CaptureHelper.html#M000431">content_for? (ActionView::Helpers::CaptureHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/TagHelper.html#M000555">content_tag (ActionView::Helpers::TagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/RecordTagHelper.html#M000544">content_tag_for (ActionView::Helpers::RecordTagHelper)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000334">content_type (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000333">content_type= (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000365">controller_class (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000364">controller_class= (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000331">controller_name (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000330">controller_name (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionView/Base.html#M000602">controller_path (ActionView::Base)</a><br />
+
+    <a href="classes/ActionView/TestCase/TestController.html#M000657">controller_path (ActionView::TestCase::TestController)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001145">convert_key (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/Context.html#M000397">convert_to_model (ActionView::Context)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001146">convert_value (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000302">cookie_verifier_secret (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000301">cookie_verifier_secret= (ActionController::Base)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000759">count (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000703">count_observers (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Template.html#M000620">counter_name (ActionView::Template)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001239">create (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionView/Helpers/CsrfHelper.html#M000432">csrf_meta_tag (ActionView::Helpers::CsrfHelper)</a><br />
+
+    <a href="classes/DateTime.html#M000009">current (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000152">current (Time)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000571">current_cycle (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001078">current_hash (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001086">current_hash (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000585">current_page? (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000570">cycle (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/Process.html#M001260">daemon (Process)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000890">dasherize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000436">date_select (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000438">datetime_select (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/Time.html#M000081">days_in_month (Time)</a><br />
+
+    <a href="classes/ActionView/Helpers/DebugHelper.html#M000448">debug (ActionView::Helpers::DebugHelper)</a><br />
+
+    <a href="classes/Kernel.html#M001250">debugger (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Backends/Yajl.html#M000911">decode (ActiveSupport::JSON::Backends::Yajl)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Backends/Yaml.html#M000912">decode (ActiveSupport::JSON::Backends::Yaml)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Backends/JSONGem.html#M000910">decode (ActiveSupport::JSON::Backends::JSONGem)</a><br />
+
+    <a href="classes/ActiveSupport/Base64.html#M000783">decode64 (ActiveSupport::Base64)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic.html#M000205">decode_credentials (ActionController::HttpAuthentication::Basic)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000217">decode_credentials (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000216">decode_credentials_header (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000959">decompose (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000968">decompose_codepoints (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Gzip.html#M000878">decompress (ActiveSupport::Gzip)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000827">decrement (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000796">decrement (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000840">decrement (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/MessageEncryptor.html#M001149">decrypt (ActiveSupport::MessageEncryptor)</a><br />
+
+    <a href="classes/ActiveSupport/MessageEncryptor.html#M001151">decrypt_and_verify (ActiveSupport::MessageEncryptor)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001129">default (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000155">default (ActionMailer::Base)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000329">default_action (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/RJS.html#M000635">default_format (ActionView::Template::Handlers::RJS)</a><br />
+
+    <a href="classes/DateTime.html#M000036">default_inspect (DateTime)</a><br />
+
+    <a href="classes/ActionController/ImplicitRender.html#M000228">default_render (ActionController::ImplicitRender)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000326">default_render (ActionController::Responder)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000663">define_attr_method (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000668">define_attribute_methods (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/ClassMethods.html#M000845">define_callbacks (ActiveSupport::Callbacks::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Callbacks.html#M000677">define_model_callbacks (ActiveModel::Callbacks)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000534">delay (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000823">delete (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000358">delete (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001140">delete (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000836">delete (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000815">delete (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000793">delete (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/FileStore.html#M000803">delete (ActiveSupport::Cache::FileStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000816">delete_matched (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000837">delete_matched (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000824">delete_matched (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/FileStore.html#M000804">delete_matched (ActiveSupport::Cache::FileStore)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000891">demodulize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000292">deprecated_config_accessor (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000293">deprecated_config_reader (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000294">deprecated_config_writer (ActionController::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Declarative.html#M001012">describe (ActiveSupport::Testing::Declarative)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000366">determine_default_controller_class (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000655">determine_default_helper_class (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/UnicodeDatabase.html#M000974">dirname (ActiveSupport::Multibyte::UnicodeDatabase)</a><br />
+
+    <a href="classes/ActionController/RackDelegation.html#M000237">dispatch (ActionController::RackDelegation)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000340">dispatch (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000327">display (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000433">distance_of_time_in_words (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000435">distance_of_time_in_words_to_now (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/RecordTagHelper.html#M000543">div_for (ActionView::Helpers::RecordTagHelper)</a><br />
+
+    <a href="classes/ActionController/RecordIdentifier.html#M000280">dom_class (ActionController::RecordIdentifier)</a><br />
+
+    <a href="classes/ActionView/Helpers/RecordIdentificationHelper.html#M000541">dom_class (ActionView::Helpers::RecordIdentificationHelper)</a><br />
+
+    <a href="classes/ActionController/RecordIdentifier.html#M000281">dom_id (ActionController::RecordIdentifier)</a><br />
+
+    <a href="classes/ActionView/Helpers/RecordIdentificationHelper.html#M000542">dom_id (ActionView::Helpers::RecordIdentificationHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000956">downcase (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000537">draggable (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/ScriptaculousHelper.html#M000551">draggable_element (ActionView::Helpers::ScriptaculousHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000538">drop_receiving (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/ScriptaculousHelper.html#M000552">drop_receiving_element (ActionView::Helpers::ScriptaculousHelper)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001173">dst? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001136">dup (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/Object.html#M000057">duplicable? (Object)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Event.html#M000987">duration (ActiveSupport::Notifications::Event)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000756">each (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveModel/DeprecatedErrorMethods.html#M000685">each_full (ActiveModel::DeprecatedErrorMethods)</a><br />
+
+    <a href="classes/Enumerable.html#M001245">each_with_object (Enumerable)</a><br />
+
+    <a href="classes/ActiveSupport/Autoload.html#M000869">eager_autoload (ActiveSupport::Autoload)</a><br />
+
+    <a href="classes/ActiveSupport/Autoload.html#M000870">eager_autoload! (ActiveSupport::Autoload)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000463">email_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000496">email_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000760">empty? (ActiveModel::Errors)</a><br />
+
+    <a href="classes/Kernel.html#M001253">enable_warnings (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Encoding/Encoder.html#M000914">encode (ActiveSupport::JSON::Encoding::Encoder)</a><br />
+
+    <a href="classes/ActiveSupport/JSON.html#M000909">encode (ActiveSupport::JSON)</a><br />
+
+    <a href="classes/ActiveSupport/Base64.html#M000782">encode64 (ActiveSupport::Base64)</a><br />
+
+    <a href="classes/ActiveSupport/Base64.html#M000784">encode64s (ActiveSupport::Base64)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic.html#M000206">encode_credentials (ActionController::HttpAuthentication::Basic)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000215">encode_credentials (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Variable.html#M000917">encode_json (ActiveSupport::JSON::Variable)</a><br />
+
+    <a href="classes/ActiveModel/Serializers/JSON.html#M000706">encode_json (ActiveModel::Serializers::JSON)</a><br />
+
+    <a href="classes/ActiveSupport/MessageEncryptor.html#M001148">encrypt (ActiveSupport::MessageEncryptor)</a><br />
+
+    <a href="classes/ActiveSupport/MessageEncryptor.html#M001150">encrypt_and_sign (ActiveSupport::MessageEncryptor)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000856">end (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001088">end_document (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001091">end_element (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/Time.html#M000112">end_of_day (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000022">end_of_day (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000115">end_of_month (Time)</a><br />
+
+    <a href="classes/Time.html#M000119">end_of_quarter (Time)</a><br />
+
+    <a href="classes/Time.html#M000105">end_of_week (Time)</a><br />
+
+    <a href="classes/Time.html#M000123">end_of_year (Time)</a><br />
+
+    <a href="classes/ActionView/Helpers/AtomFeedHelper/AtomFeedBuilder.html#M000427">entry (ActionView::Helpers::AtomFeedHelper::AtomFeedBuilder)</a><br />
+
+    <a href="classes/Rails.html#M001275">env (Rails)</a><br />
+
+    <a href="classes/Rails.html#M001276">env= (Rails)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Benchmarker.html#M001069">environment (ActiveSupport::Testing::Benchmarker)</a><br />
+
+    <a href="classes/ActionView/FileSystemResolver.html#M000647">eql? (ActionView::FileSystemResolver)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001198">eql? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/ERB.html#M000632">erb_trim_mode (ActionView::Template::Handlers::ERB)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001089">error (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActionView/Helpers/ActiveModelInstanceTag.html#M000400">error_message (ActionView::Helpers::ActiveModelInstanceTag)</a><br />
+
+    <a href="classes/ActionView/Helpers/ActiveModelInstanceTag.html#M000399">error_wrapping (ActionView::Helpers::ActiveModelInstanceTag)</a><br />
+
+    <a href="classes/ActiveModel/Validations.html#M000715">errors (ActiveModel::Validations)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Encoding/Encoder.html#M000915">escape (ActiveSupport::JSON::Encoding::Encoder)</a><br />
+
+    <a href="classes/ActionView/Helpers/JavaScriptHelper.html#M000499">escape_javascript (ActionView::Helpers::JavaScriptHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/TagHelper.html#M000557">escape_once (ActionView::Helpers::TagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000562">excerpt (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/Enumerable.html#M001248">exclude? (Enumerable)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000794">exist (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/FileStore.html#M000805">exist? (ActiveSupport::Cache::FileStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000838">exist? (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000817">exist? (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000825">exist? (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000608">exists? (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActiveSupport/Cache.html#M000788">expand_cache_key (ActiveSupport::Cache)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000213">expected_response (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActionController/Caching/Actions.html#M000165">expire_action (ActionController::Caching::Actions)</a><br />
+
+    <a href="classes/ActionController/Caching/Fragments.html#M000172">expire_fragment (ActionController::Caching::Fragments)</a><br />
+
+    <a href="classes/ActionController/Caching/Pages.html#M000174">expire_page (ActionController::Caching::Pages)</a><br />
+
+    <a href="classes/ActionController/Caching/Pages/ClassMethods.html#M000176">expire_page (ActionController::Caching::Pages::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/ConditionalGet.html#M000191">expires_in (ActionController::ConditionalGet)</a><br />
+
+    <a href="classes/ActionController/ConditionalGet.html#M000192">expires_now (ActionController::ConditionalGet)</a><br />
+
+    <a href="classes/ActiveModel/Callbacks.html#M000676">extended (ActiveModel::Callbacks)</a><br />
+
+    <a href="classes/ActiveSupport/Concern.html#M000859">extended (ActiveSupport::Concern)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Declarative.html#M001011">extended (ActiveSupport::Testing::Declarative)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001127">extractable_options? (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000411">favicon_link_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000833">fetch (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000820">fetch (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001134">fetch (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000491">field_set_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000450">fields_for (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000455">file_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000484">file_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/UnicodeDatabase.html#M000975">filename (ActiveSupport::Multibyte::UnicodeDatabase)</a><br />
+
+    <a href="classes/ActionController/Base/DeprecatedBehavior.html#M000311">filter_parameter_logging (ActionController::Base::DeprecatedBehavior)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000605">find (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000607">find_all (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActionView/Resolver.html#M000643">find_all (ActionView::Resolver)</a><br />
+
+    <a href="classes/ActionView/Layouts.html#M000591">find_layout (ActionView::Layouts)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000606">find_template (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001237">find_tzinfo (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001107">flush (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable/InstanceMethods.html#M000925">flush_cache (ActiveSupport::Memoizable::InstanceMethods)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000385">for_class (HTML::Selector)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000386">for_id (HTML::Selector)</a><br />
+
+    <a href="classes/ActiveSupport/TestCase.html#M001160">for_tag (ActiveSupport::TestCase)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000892">foreign_key (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Isolation.html#M001014">forking_env? (ActiveSupport::Testing::Isolation)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000256">form_authenticity_param (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000255">form_authenticity_token (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000449">form_for (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000479">form_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcRuns.html#M001051">format (ActiveSupport::Testing::Metrics::GcRuns)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001043">format (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcTime.html#M001054">format (ActiveSupport::Testing::Metrics::GcTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Time.html#M001032">format (ActiveSupport::Testing::Metrics::Time)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Objects.html#M001047">format (ActiveSupport::Testing::Metrics::Objects)</a><br />
+
+    <a href="classes/ActionView/LookupContext/Details.html#M000611">formats= (ActionView::LookupContext::Details)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001180">formatted_offset (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000033">formatted_offset (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000137">formatted_offset (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001223">formatted_offset (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionController/Caching/Fragments.html#M000168">fragment_cache_key (ActionController::Caching::Fragments)</a><br />
+
+    <a href="classes/ActionController/Caching/Fragments.html#M000171">fragment_exist? (ActionController::Caching::Fragments)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001215">freeze (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable/InstanceMethods.html#M000921">freeze_with_memoizable (ActiveSupport::Memoizable::InstanceMethods)</a><br />
+
+    <a href="classes/ActionController/ConditionalGet.html#M000189">fresh_when (ActionController::ConditionalGet)</a><br />
+
+    <a href="classes/ActiveModel/Serializers/JSON.html#M000708">from_json (ActiveModel::Serializers::JSON)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001124">from_now (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/ActionView/Railties/LogSubscriber.html#M000590">from_rails_root (ActionView::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActiveModel/Serializers/Xml.html#M000710">from_xml (ActiveModel::Serializers::Xml)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000765">full_messages (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/Testing.html#M001002">full_test_name (ActiveSupport::Testing)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001197">future? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000011">future? (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000087">future? (Time)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000961">g_length (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000966">g_pack (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000965">g_unpack (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/MessageVerifier.html#M001154">generate (ActiveSupport::MessageVerifier)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000766">generate_message (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/Dependencies/WatchStack.html#M000874">get (ActiveSupport::Dependencies::WatchStack)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000355">get (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000754">get (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/Configurable/ClassMethods.html#M000863">get_config (ActiveSupport::Configurable::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001166">getgm (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001172">getlocal (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001167">getutc (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000024">getutc (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001176">gmt? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001178">gmt_offset (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001168">gmtime (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001179">gmtoff (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Enumerable.html#M001243">group_by (Enumerable)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000472">grouped_collection_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000477">grouped_options_for_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ERB/Util.html#M000074">h (ERB::Util)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000214">ha1 (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActiveSupport/Rescuable.html#M000995">handler_for_rescue (ActiveSupport::Rescuable)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000328">has_errors? (ActionController::Responder)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001208">hash (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionController/Head.html#M000194">head (ActionController::Head)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000359">head (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000158">headers (ActionMailer::Base)</a><br />
+
+    <a href="classes/ActionController/Testing.html#M000267">headers= (ActionController::Testing)</a><br />
+
+    <a href="classes/ActionController/Helpers/ClassMethods.html#M000197">helper_attr (ActionController::Helpers::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000654">helper_class (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000656">helper_method (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActionController/Helpers/ClassMethods.html#M000198">helpers (ActionController::Helpers::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Helpers/ClassMethods.html#M000195">helpers_dir (ActionController::Helpers::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Helpers/ClassMethods.html#M000196">helpers_dir= (ActionController::Helpers::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/SecureRandom.html#M000998">hex (ActiveSupport::SecureRandom)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000454">hidden_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000483">hidden_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000526">hide (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionController/HideActions/ClassMethods.html#M000199">hide_action (ActionController::HideActions::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000561">highlight (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ERB/Util.html#M000075">html_escape (ERB::Util)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001117">html_safe (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/Fixnum.html#M000078">html_safe? (Fixnum)</a><br />
+
+    <a href="classes/Object.html#M000064">html_safe? (Object)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001116">html_safe? (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001187">httpdate (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000903">human (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActiveModel/Name.html#M000768">human (ActiveModel::Name)</a><br />
+
+    <a href="classes/ActiveModel/Translation.html#M000713">human_attribute_name (ActiveModel::Translation)</a><br />
+
+    <a href="classes/ActiveModel/Translation.html#M000714">human_name (ActiveModel::Translation)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000884">humanize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveModel/Translation.html#M000711">i18n_scope (ActiveModel::Translation)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000412">image_path (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000490">image_submit_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000418">image_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/DateTime.html#M000017">in (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000093">in (Time)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000964">in_char_class? (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001170">in_time_zone (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000153">in_time_zone (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000043">in_time_zone (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000937">include? (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/Test/Unit/Collector/ObjectSpace.html#M001264">include? (Test::Unit::Collector::ObjectSpace)</a><br />
+
+    <a href="classes/I18n/Railtie.html#M001262">include_fallbacks_module (I18n::Railtie)</a><br />
+
+    <a href="classes/ActionController/TestCase/RaiseActionExceptions.html#M000370">included (ActionController::TestCase::RaiseActionExceptions)</a><br />
+
+    <a href="classes/ActionView/Template/Handlers/Compilable.html#M000622">included (ActionView::Template::Handlers::Compilable)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Isolation.html#M001015">included (ActiveSupport::Testing::Isolation)</a><br />
+
+    <a href="classes/ActiveSupport/Concern.html#M000861">included (ActiveSupport::Concern)</a><br />
+
+    <a href="classes/ActiveSupport/Testing.html#M001001">included (ActiveSupport::Testing)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable/InstanceMethods.html#M000920">included (ActiveSupport::Memoizable::InstanceMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000839">increment (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000826">increment (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000795">increment (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActionController/Middleware.html#M000351">index (ActionController::Middleware)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000938">index (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/Enumerable.html#M001246">index_by (Enumerable)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000881">inflections (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000704">inherited (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/HideActions/ClassMethods.html#M000200">inherited (ActionController::HideActions::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000290">inherited (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000342">inherited (ActionController::Metal)</a><br />
+
+    <a href="classes/I18n/Railtie.html#M001261">init_fallbacks (I18n::Railtie)</a><br />
+
+    <a href="classes/Rails.html#M001268">initialize! (Rails)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000182">initialize_template_class (ActionController::Compatibility)</a><br />
+
+    <a href="classes/Rails.html#M001270">initialized= (Rails)</a><br />
+
+    <a href="classes/Rails.html#M001269">initialized? (Rails)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000936">insert (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000521">insert_html (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/DateTime.html#M000035">inspect (DateTime)</a><br />
+
+    <a href="classes/ActionView/Template.html#M000621">inspect (ActionView::Template)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001182">inspect (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000897">instance (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000671">instance_method_already_implemented? (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/Object.html#M000058">instance_variable_names (Object)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000700">instantiate_observers (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Instrumenter.html#M000985">instrument (ActiveSupport::Notifications::Instrumenter)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000832">instrument (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000831">instrument= (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActionController/Caching/Fragments.html#M000173">instrument_fragment_cache (ActionController::Caching::Fragments)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications.html#M000977">instrumenter (ActiveSupport::Notifications)</a><br />
+
+    <a href="classes/ActiveModel/Validations.html#M000717">invalid? (ActiveModel::Validations)</a><br />
+
+    <a href="classes/ActiveModel/DeprecatedErrorMethods.html#M000684">invalid? (ActiveModel::DeprecatedErrorMethods)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000300">ip_spoofing_check (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000299">ip_spoofing_check= (ActionController::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000901">irregular (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001213">is_a? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/LoadError.html#M000068">is_missing? (LoadError)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001174">isdst (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001184">iso8601 (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ERB/Util.html#M000076">j (ERB::Util)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000404">javascript_include_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000402">javascript_path (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/JavaScriptHelper.html#M000500">javascript_tag (ActionView::Helpers::JavaScriptHelper)</a><br />
+
+    <a href="classes/ERB/Util.html#M000077">json_escape (ERB::Util)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001133">key? (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveModel/Validator.html#M000773">kind (ActiveModel::Validator)</a><br />
+
+    <a href="classes/ActiveModel/Validator.html#M000775">kind (ActiveModel::Validator)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001214">kind_of? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionView/Helpers/TranslationHelper.html#M000576">l (ActionView::Helpers::TranslationHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000451">label (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000482">label_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/Time.html#M000100">last_month (Time)</a><br />
+
+    <a href="classes/Time.html#M000098">last_year (Time)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000948">length (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000953">limit (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000579">link_to (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/JavaScriptHelper.html#M000502">link_to_function (ActionView::Helpers::JavaScriptHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000583">link_to_if (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000582">link_to_unless (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000581">link_to_unless_current (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000519">literal (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000942">ljust (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/UnicodeDatabase.html#M000972">load (ActiveSupport::Multibyte::UnicodeDatabase)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001227">local (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/DateTime.html#M000008">local_offset (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000084">local_time (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001233">local_to_utc (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionView/LookupContext/Details.html#M000613">locale (ActionView::LookupContext::Details)</a><br />
+
+    <a href="classes/ActionView/LookupContext/Details.html#M000614">locale= (ActionView::LookupContext::Details)</a><br />
+
+    <a href="classes/ActionView/Helpers/TranslationHelper.html#M000575">localize (ActionView::Helpers::TranslationHelper)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001171">localtime (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000335">location (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000336">location= (ActionController::Metal)</a><br />
+
+    <a href="classes/ActiveSupport/Dependencies/WatchStack.html#M000877">lock (ActiveSupport::Dependencies::WatchStack)</a><br />
+
+    <a href="classes/ActiveSupport/Dependencies/WatchStack.html#M000873">locked (ActiveSupport::Dependencies::WatchStack)</a><br />
+
+    <a href="classes/ActionController/Railties/LogSubscriber.html#M000279">logger (ActionController::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionView/Railties/LogSubscriber.html#M000589">logger (ActionView::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/Rails.html#M001271">logger (Rails)</a><br />
+
+    <a href="classes/Rails.html#M001272">logger= (Rails)</a><br />
+
+    <a href="classes/ActiveModel/Translation.html#M000712">lookup_ancestors (ActiveModel::Translation)</a><br />
+
+    <a href="classes/ActiveSupport/Cache.html#M000787">lookup_store (ActiveSupport::Cache)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000945">lstrip (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000160">mail (ActionMailer::Base)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000584">mail_to (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000154">mailer_name (ActionMailer::Base)</a><br />
+
+    <a href="classes/Enumerable.html#M001247">many? (Enumerable)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000567">markdown (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001216">marshal_dump (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001217">marshal_load (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods/AttributeMethodMatcher.html#M000673">match (ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000388">match (HTML::Selector)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000851">matches? (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001042">measure (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001025">measure (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcRuns.html#M001049">measure (ActiveSupport::Testing::Metrics::GcRuns)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcRuns.html#M001048">measure (ActiveSupport::Testing::Metrics::GcRuns)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/CpuTime.html#M001036">measure (ActiveSupport::Testing::Metrics::CpuTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcRuns.html#M001050">measure (ActiveSupport::Testing::Metrics::GcRuns)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Objects.html#M001044">measure (ActiveSupport::Testing::Metrics::Objects)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001041">measure (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Time.html#M001031">measure (ActiveSupport::Testing::Metrics::Time)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001037">measure (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001040">measure (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Objects.html#M001046">measure (ActiveSupport::Testing::Metrics::Objects)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Objects.html#M001045">measure (ActiveSupport::Testing::Metrics::Objects)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001038">measure (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcTime.html#M001053">measure (ActiveSupport::Testing::Metrics::GcTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/GcTime.html#M001052">measure (ActiveSupport::Testing::Metrics::GcTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/ProcessTime.html#M001033">measure (ActiveSupport::Testing::Metrics::ProcessTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Memory.html#M001039">measure (ActiveSupport::Testing::Metrics::Memory)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/WallTime.html#M001034">measure (ActiveSupport::Testing::Metrics::WallTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001024">measure_mode (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable.html#M000919">memoize (ActiveSupport::Memoizable)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable/InstanceMethods.html#M000922">memoize_all (ActiveSupport::Memoizable::InstanceMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable.html#M000918">memoized_ivar_for (ActiveSupport::Memoizable)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001137">merge (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000187">method_for_action (ActionController::Compatibility)</a><br />
+
+    <a href="classes/ActionController/ImplicitRender.html#M000229">method_for_action (ActionController::ImplicitRender)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/ProxyTestResult.html#M001063">method_missing (ActiveSupport::Testing::ProxyTestResult)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods.html#M000659">method_missing (ActiveModel::AttributeMethods)</a><br />
+
+    <a href="classes/ActiveSupport/StringInquirer.html#M001159">method_missing (ActiveSupport::StringInquirer)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000927">method_missing (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001219">method_missing (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/OrderedOptions.html#M001157">method_missing (ActiveSupport::OrderedOptions)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods/AttributeMethodMatcher.html#M000675">method_missing_target (ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods/AttributeMethodMatcher.html#M000674">method_name (ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000516">method_option_to_s (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000344">middleware (ActionController::Metal)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000790">middleware (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/DateTime.html#M000019">midnight (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000109">midnight (Time)</a><br />
+
+    <a href="classes/ActionView/Template.html#M000618">mime_type (ActionView::Template)</a><br />
+
+    <a href="classes/Time.html#M000127">minus_with_coercion (Time)</a><br />
+
+    <a href="classes/Time.html#M000130">minus_without_coercion (Time)</a><br />
+
+    <a href="classes/Time.html#M000129">minus_without_duration (Time)</a><br />
+
+    <a href="classes/NameError.html#M000072">missing_name (NameError)</a><br />
+
+    <a href="classes/NameError.html#M000073">missing_name? (NameError)</a><br />
+
+    <a href="classes/ActiveModel/Naming.html#M000697">model_name (ActiveModel::Naming)</a><br />
+
+    <a href="classes/Time.html#M000103">monday (Time)</a><br />
+
+    <a href="classes/Integer.html#M000050">month (Integer)</a><br />
+
+    <a href="classes/Integer.html#M000049">months (Integer)</a><br />
+
+    <a href="classes/Time.html#M000094">months_ago (Time)</a><br />
+
+    <a href="classes/Time.html#M000095">months_since (Time)</a><br />
+
+    <a href="classes/Integer.html#M000048">multiple_of? (Integer)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000830">mute (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000849">name (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001161">name (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001023">name (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000322">navigation_behavior (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionView/Resolver.html#M000641">new (ActionView::Resolver)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/CallbackChain.html#M000857">new (ActiveSupport::Callbacks::CallbackChain)</a><br />
+
+    <a href="classes/ActiveModel/BlockValidator.html#M000781">new (ActiveModel::BlockValidator)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods/AttributeMethodMatcher.html#M000672">new (ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher)</a><br />
+
+    <a href="classes/ActiveModel/EachValidator.html#M000777">new (ActiveModel::EachValidator)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000387">new (HTML::Selector)</a><br />
+
+    <a href="classes/ActionView/TestCase/TestController.html#M000658">new (ActionView::TestCase::TestController)</a><br />
+
+    <a href="classes/ActiveModel/Validator.html#M000774">new (ActiveModel::Validator)</a><br />
+
+    <a href="classes/ActiveSupport/BacktraceCleaner.html#M001096">new (ActiveSupport::BacktraceCleaner)</a><br />
+
+    <a href="classes/ActionView/FileSystemResolver.html#M000646">new (ActionView::FileSystemResolver)</a><br />
+
+    <a href="classes/ActiveModel/Observer.html#M000772">new (ActiveModel::Observer)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000926">new (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001104">new (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActionView/Template.html#M000616">new (ActionView::Template)</a><br />
+
+    <a href="classes/Logger/Formatter.html#M000069">new (Logger::Formatter)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/UnicodeDatabase.html#M000971">new (ActiveSupport::Multibyte::UnicodeDatabase)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000592">new (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActiveModel/Name.html#M000767">new (ActiveModel::Name)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Fanout.html#M000978">new (ActiveSupport::Notifications::Fanout)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Instrumenter.html#M000984">new (ActiveSupport::Notifications::Instrumenter)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Event.html#M000986">new (ActiveSupport::Notifications::Event)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000846">new (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/RemoteError.html#M001059">new (ActiveSupport::Testing::RemoteError)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Notifier.html#M000989">new (ActiveSupport::Notifications::Notifier)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/FileStore.html#M000800">new (ActiveSupport::Cache::FileStore)</a><br />
+
+    <a href="classes/ActionController/Middleware/ActionMiddleware.html#M000352">new (ActionController::Middleware::ActionMiddleware)</a><br />
+
+    <a href="classes/ActionView/Helpers/AtomFeedHelper/AtomBuilder.html#M000424">new (ActionView::Helpers::AtomFeedHelper::AtomBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001022">new (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActionView/Helpers/AtomFeedHelper/AtomFeedBuilder.html#M000425">new (ActionView::Helpers::AtomFeedHelper::AtomFeedBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001221">new (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000157">new (ActionMailer::Base)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper/InvalidNumberError.html#M000510">new (ActionView::Helpers::NumberHelper::InvalidNumberError)</a><br />
+
+    <a href="classes/ActionController/Middleware.html#M000350">new (ActionController::Middleware)</a><br />
+
+    <a href="classes/ActiveSupport/JSON/Encoding/Encoder.html#M000913">new (ActiveSupport::JSON::Encoding::Encoder)</a><br />
+
+    <a href="classes/ActionController/Middleware.html#M000347">new (ActionController::Middleware)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000332">new (ActionController::Metal)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Profiler.html#M001072">new (ActiveSupport::Testing::Profiler)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemCacheStore.html#M000807">new (ActiveSupport::Cache::MemCacheStore)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000317">new (ActionController::Responder)</a><br />
+
+    <a href="classes/ActiveModel/Validations/AcceptanceValidator.html#M000733">new (ActiveModel::Validations::AcceptanceValidator)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Performer.html#M001064">new (ActiveSupport::Testing::Performer)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/CpuTime.html#M001035">new (ActiveSupport::Testing::Metrics::CpuTime)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/ProxyTestResult.html#M001060">new (ActiveSupport::Testing::ProxyTestResult)</a><br />
+
+    <a href="classes/ActionController/Caching/Actions/ActionCachePath.html#M000167">new (ActionController::Caching::Actions::ActionCachePath)</a><br />
+
+    <a href="classes/ActionController/Dispatcher.html#M000316">new (ActionController::Dispatcher)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001162">new (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000898">new (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000819">new (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/InheritableOptions.html#M001158">new (ActiveSupport::InheritableOptions)</a><br />
+
+    <a href="classes/ActiveSupport/MessageVerifier.html#M001152">new (ActiveSupport::MessageVerifier)</a><br />
+
+    <a href="classes/ActiveModel/Validations/LengthValidator.html#M000744">new (ActiveModel::Validations::LengthValidator)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000752">new (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/MessageEncryptor.html#M001147">new (ActiveSupport::MessageEncryptor)</a><br />
+
+    <a href="classes/ActiveModel/Validations/NumericalityValidator.html#M000747">new (ActiveModel::Validations::NumericalityValidator)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000812">new (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Dependencies/WatchStack.html#M000872">new (ActiveSupport::Dependencies::WatchStack)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001128">new (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001238">new (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/Dependencies/WatchStack.html#M000875">new_constants_for (ActiveSupport::Dependencies::WatchStack)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000391">next_element (HTML::Selector)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000850">next_id (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/Time.html#M000101">next_month (Time)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000396">next_selector (HTML::Selector)</a><br />
+
+    <a href="classes/Time.html#M000107">next_week (Time)</a><br />
+
+    <a href="classes/Time.html#M000099">next_year (Time)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000221">nonce (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000958">normalize (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000848">normalize_options! (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications.html#M000976">notifier (ActiveSupport::Notifications)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000702">notify_observers (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001230">now (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000394">nth_child (HTML::Selector)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000464">number_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000497">number_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000504">number_to_currency (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000509">number_to_human (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000508">number_to_human_size (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000505">number_to_percentage (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000503">number_to_phone (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000506">number_with_delimiter (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/NumberHelper.html#M000507">number_with_precision (ActionView::Helpers::NumberHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/ActiveModelInstanceTag.html#M000398">object (ActionView::Helpers::ActiveModelInstanceTag)</a><br />
+
+    <a href="classes/ActiveModel/Observer.html#M000769">observe (ActiveModel::Observer)</a><br />
+
+    <a href="classes/ActiveModel/Observer.html#M000771">observed_class (ActiveModel::Observer)</a><br />
+
+    <a href="classes/ActiveModel/Observer.html#M000770">observed_classes (ActiveModel::Observer)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000699">observers (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Observing/ClassMethods.html#M000698">observers= (ActiveModel::Observing::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/DeprecatedErrorMethods.html#M000681">on (ActiveModel::DeprecatedErrorMethods)</a><br />
+
+    <a href="classes/ActiveModel/DeprecatedErrorMethods.html#M000682">on_base (ActiveModel::DeprecatedErrorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001084">on_cdata_block (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001083">on_characters (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001080">on_end_document (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001082">on_end_element (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001079">on_start_document (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX/HashBuilder.html#M001081">on_start_element (ActiveSupport::XmlMini_LibXMLSAX::HashBuilder)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000395">only_child (HTML::Selector)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000223">opaque (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000476">option_groups_from_collection_for_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000515">options_for_ajax (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000514">options_for_javascript (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000474">options_for_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000475">options_from_collection_for_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000954">ord (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000894">ordinalize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/Integer.html#M000047">ordinalize (Integer)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Performer.html#M001066">output_filename (ActiveSupport::Testing::Performer)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Benchmarker.html#M001071">output_filename (ActiveSupport::Testing::Benchmarker)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Profiler.html#M001076">output_filename (ActiveSupport::Testing::Profiler)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000896">parameterize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionController/RackDelegation.html#M000238">params (ActionController::RackDelegation)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Event.html#M000988">parent_of? (ActiveSupport::Notifications::Event)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_LibXMLSAX.html#M001077">parse (ActiveSupport::XmlMini_LibXMLSAX)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX.html#M001085">parse (ActiveSupport::XmlMini_NokogiriSAX)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001229">parse (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveModel/Validations/NumericalityValidator.html#M000750">parse_raw_value (ActiveModel::Validations::NumericalityValidator)</a><br />
+
+    <a href="classes/ActionView/Helpers/RecordIdentificationHelper.html#M000540">partial_path (ActionView::Helpers::RecordIdentificationHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000453">password_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000485">password_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001195">past? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000085">past? (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000010">past? (DateTime)</a><br />
+
+    <a href="classes/LoadError.html#M000067">path (LoadError)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000417">path_to_audio (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000413">path_to_image (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000403">path_to_javascript (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000409">path_to_stylesheet (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000415">path_to_video (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Pending.html#M001020">pending (ActiveSupport::Testing::Pending)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000188">performed? (ActionController::Compatibility)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001169">period (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001235">period_for_local (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001234">period_for_utc (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000461">phone_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000494">phone_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000899">plural (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActionController/RecordIdentifier.html#M000284">plural_class_name (ActionController::RecordIdentifier)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000882">pluralize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000563">pluralize (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActionController/PolymorphicRoutes.html#M000272">polymorphic_path (ActionController::PolymorphicRoutes)</a><br />
+
+    <a href="classes/ActionController/PolymorphicRoutes.html#M000271">polymorphic_url (ActionController::PolymorphicRoutes)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000356">post (ActionController::TestCase)</a><br />
+
+    <a href="classes/Float.html#M000046">precisionless_round (Float)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000367">prepare_controller_class (ActionController::TestCase)</a><br />
+
+    <a href="classes/Object.html#M000056">presence (Object)</a><br />
+
+    <a href="classes/Object.html#M000055">present? (Object)</a><br />
+
+    <a href="classes/ActiveModel/Dirty.html#M000689">previous_changes (ActiveModel::Dirty)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable/InstanceMethods.html#M000924">prime_cache (ActiveSupport::Memoizable::InstanceMethods)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000362">process (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionController/Middleware.html#M000349">process (ActionController::Middleware)</a><br />
+
+    <a href="classes/ActionController/Instrumentation.html#M000230">process_action (ActionController::Instrumentation)</a><br />
+
+    <a href="classes/ActionController/Railties/LogSubscriber.html#M000275">process_action (ActionController::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/HTML/WhiteListSanitizer.html#M000383">process_attributes_for (HTML::WhiteListSanitizer)</a><br />
+
+    <a href="classes/HTML/LinkSanitizer.html#M000379">process_node (HTML::LinkSanitizer)</a><br />
+
+    <a href="classes/HTML/Sanitizer.html#M000375">process_node (HTML::Sanitizer)</a><br />
+
+    <a href="classes/HTML/FullSanitizer.html#M000377">process_node (HTML::FullSanitizer)</a><br />
+
+    <a href="classes/HTML/WhiteListSanitizer.html#M000382">process_node (HTML::WhiteListSanitizer)</a><br />
+
+    <a href="classes/ActionView/Base.html#M000601">process_view_paths (ActionView::Base)</a><br />
+
+    <a href="classes/ActionController/Testing.html#M000265">process_with_new_base_test (ActionController::Testing)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001027">profile (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000257">protect_against_forgery? (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000652">protect_against_forgery? (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000248">protect_from_forgery (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection/ClassMethods.html#M000258">protect_from_forgery (ActionController::RequestForgeryProtection::ClassMethods)</a><br />
+
+    <a href="classes/Rails.html#M001279">public_path (Rails)</a><br />
+
+    <a href="classes/Rails.html#M001280">public_path= (Rails)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Fanout.html#M000982">publish (ActiveSupport::Notifications::Fanout)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Notifier.html#M000990">publish (ActiveSupport::Notifications::Notifier)</a><br />
+
+    <a href="classes/ActionView/Base.html#M000603">punctuate_body! (ActionView::Base)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000357">put (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000458">radio_button (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/InstanceTagMethods/ClassMethods.html#M000469">radio_button_checked? (ActionView::Helpers::InstanceTagMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000488">radio_button_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/SecureRandom.html#M000997">random_bytes (ActiveSupport::SecureRandom)</a><br />
+
+    <a href="classes/ActiveSupport/SecureRandom.html#M001000">random_number (ActiveSupport::SecureRandom)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000465">range_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000498">range_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/RawOutputHelper.html#M000539">raw (ActionView::Helpers::RawOutputHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000813">read (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000791">read (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000821">read (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/FileStore.html#M000801">read (ActiveSupport::Cache::FileStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000834">read (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/CompressedMemCacheStore.html#M000798">read (ActiveSupport::Cache::CompressedMemCacheStore)</a><br />
+
+    <a href="classes/ActionController/Caching/Fragments.html#M000170">read_fragment (ActionController::Caching::Fragments)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemCacheStore.html#M000808">read_multi (ActiveSupport::Cache::MemCacheStore)</a><br />
+
+    <a href="classes/DateTime.html#M000034">readable_inspect (DateTime)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000156">receive (ActionMailer::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000853">recompile! (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Profiler.html#M001075">record (ActiveSupport::Testing::Profiler)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Benchmarker.html#M001068">record (ActiveSupport::Testing::Benchmarker)</a><br />
+
+    <a href="classes/ActionController/RecordIdentifier.html#M000282">record_key_for_dom_id (ActionController::RecordIdentifier)</a><br />
+
+    <a href="classes/ActionController/TestResponse.html#M000354">recycle! (ActionController::TestResponse)</a><br />
+
+    <a href="classes/ActionController/Instrumentation.html#M000234">redirect_to (ActionController::Instrumentation)</a><br />
+
+    <a href="classes/ActionController/Railties/LogSubscriber.html#M000277">redirect_to (ActionController::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000529">redirect_to (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionController/Flash.html#M000193">redirect_to (ActionController::Flash)</a><br />
+
+    <a href="classes/ActionController/Redirecting.html#M000241">redirect_to (ActionController::Redirecting)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000405">register_javascript_expansion (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000407">register_javascript_include_default (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000406">register_stylesheet_expansion (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001131">regular_writer (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000530">reload (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000511">remote_function (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000524">remove (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/BacktraceCleaner.html#M001101">remove_filters! (ActiveSupport::BacktraceCleaner)</a><br />
+
+    <a href="classes/ActiveSupport/BacktraceCleaner.html#M001100">remove_silencers! (ActiveSupport::BacktraceCleaner)</a><br />
+
+    <a href="classes/ActionController/Instrumentation.html#M000231">render (ActionController::Instrumentation)</a><br />
+
+    <a href="classes/ActionView/Template/Handler.html#M000637">render (ActionView::Template::Handler)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000651">render (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActionView/Template.html#M000617">render (ActionView::Template)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000594">render (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActionView/Rendering.html#M000599">render (ActionView::Rendering)</a><br />
+
+    <a href="classes/ActionView/Railties/LogSubscriber.html#M000588">render_collection (ActionView::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000595">render_collection (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActionView/Railties/LogSubscriber.html#M000587">render_partial (ActionView::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000598">render_partial (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActionView/Railties/LogSubscriber.html#M000586">render_template (ActionView::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000185">render_to_body (ActionController::Compatibility)</a><br />
+
+    <a href="classes/ActionController/Renderers.html#M000242">render_to_body (ActionController::Renderers)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000967">reorder_characters (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000523">replace (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000522">replace_html (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Performer.html#M001065">report (ActiveSupport::Testing::Performer)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Profiler.html#M001074">report (ActiveSupport::Testing::Profiler)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000249">request_forgery_protection_token (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection/ClassMethods.html#M000259">request_forgery_protection_token (ActionController::RequestForgeryProtection::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000250">request_forgery_protection_token= (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection/ClassMethods.html#M000260">request_forgery_protection_token= (ActionController::RequestForgeryProtection::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic/ControllerMethods.html#M000210">request_http_basic_authentication (ActionController::HttpAuthentication::Basic::ControllerMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest/ControllerMethods.html#M000226">request_http_digest_authentication (ActionController::HttpAuthentication::Digest::ControllerMethods)</a><br />
+
+    <a href="classes/Kernel.html#M001257">require_library_or_gem (Kernel)</a><br />
+
+    <a href="classes/ActionController/Compatibility.html#M000181">rescue_action (ActionController::Compatibility)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000369">rescue_action_in_public! (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionController/TestCase/RaiseActionExceptions.html#M000371">rescue_action_without_handler (ActionController::TestCase::RaiseActionExceptions)</a><br />
+
+    <a href="classes/ActiveSupport/Rescuable/ClassMethods.html#M000996">rescue_from (ActiveSupport::Rescuable::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Rescuable.html#M000994">rescue_with_handler (ActiveSupport::Rescuable)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/ClassMethods.html#M000844">reset_callbacks (ActiveSupport::Callbacks::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000572">reset_cycle (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActionController/RackDelegation.html#M000240">reset_session (ActionController::RackDelegation)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000307">resource_action_separator (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000308">resource_action_separator= (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000325">resource_location (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000324">resourceful? (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000319">respond (ActionController::Responder)</a><br />
+
+    <a href="classes/ActionController/MimeResponds/ClassMethods.html#M000235">respond_to (ActionController::MimeResponds::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000928">respond_to? (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001218">respond_to? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods.html#M000660">respond_to? (ActiveModel::AttributeMethods)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods.html#M000661">respond_to_without_attributes? (ActiveModel::AttributeMethods)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000339">response_body= (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/RackDelegation.html#M000239">response_body= (ActionController::RackDelegation)</a><br />
+
+    <a href="classes/Object.html#M000059">returning (Object)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000949">reverse (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001138">reverse_merge (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001139">reverse_merge! (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001188">rfc2822 (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001189">rfc822 (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000939">rindex (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000941">rjust (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/Rails.html#M001274">root (Rails)</a><br />
+
+    <a href="classes/Float.html#M000045">round (Float)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000944">rstrip (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/SetupAndTeardown/ForClassicTestUnit.html#M001058">run (ActiveSupport::Testing::SetupAndTeardown::ForClassicTestUnit)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Isolation/MiniTest.html#M001017">run (ActiveSupport::Testing::Isolation::MiniTest)</a><br />
+
+    <a href="classes/ActiveSupport/Testing.html#M001003">run (ActiveSupport::Testing)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Isolation/TestUnit.html#M001016">run (ActiveSupport::Testing::Isolation::TestUnit)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/SetupAndTeardown/ForMiniTest.html#M001057">run (ActiveSupport::Testing::SetupAndTeardown::ForMiniTest)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Benchmarker.html#M001067">run (ActiveSupport::Testing::Benchmarker)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Profiler.html#M001073">run (ActiveSupport::Testing::Profiler)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks.html#M000841">run_callbacks (ActiveSupport::Callbacks)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Isolation/Subprocess.html#M001019">run_in_isolation (ActiveSupport::Testing::Isolation::Subprocess)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Isolation/Forking.html#M001018">run_in_isolation (ActiveSupport::Testing::Isolation::Forking)</a><br />
+
+    <a href="classes/ActiveSupport/Testing.html#M001006">run_profile (ActiveSupport::Testing)</a><br />
+
+    <a href="classes/ActiveSupport/Testing.html#M001004">run_test (ActiveSupport::Testing)</a><br />
+
+    <a href="classes/ActiveSupport/Testing.html#M001005">run_warmup (ActiveSupport::Testing)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000559">safe_concat (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001113">safe_concat (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/HTML/Sanitizer.html#M000372">sanitize (HTML::Sanitizer)</a><br />
+
+    <a href="classes/HTML/FullSanitizer.html#M000376">sanitize (HTML::FullSanitizer)</a><br />
+
+    <a href="classes/ActionView/Helpers/SanitizeHelper.html#M000545">sanitize (ActionView::Helpers::SanitizeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/SanitizeHelper.html#M000546">sanitize_css (ActionView::Helpers::SanitizeHelper)</a><br />
+
+    <a href="classes/HTML/WhiteListSanitizer.html#M000380">sanitize_css (HTML::WhiteListSanitizer)</a><br />
+
+    <a href="classes/ActionController/RecordIdentifier.html#M000283">sanitize_dom_id (ActionController::RecordIdentifier)</a><br />
+
+    <a href="classes/HTML/Sanitizer.html#M000373">sanitizeable? (HTML::Sanitizer)</a><br />
+
+    <a href="classes/HTML/LinkSanitizer.html#M000378">sanitizeable? (HTML::LinkSanitizer)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000459">search_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000492">search_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/Time.html#M000088">seconds_since_midnight (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000012">seconds_since_midnight (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001220">seconds_to_utc_offset (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000220">secret_token (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000389">select (HTML::Selector)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000520">select (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000470">select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000440">select_date (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000439">select_datetime (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000445">select_day (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000390">select_first (HTML::Selector)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000444">select_hour (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000443">select_minute (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000446">select_month (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000442">select_second (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000480">select_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000441">select_time (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000447">select_year (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionController/ImplicitRender.html#M000227">send_action (ActionController::ImplicitRender)</a><br />
+
+    <a href="classes/ActionController/Streaming.html#M000264">send_data (ActionController::Streaming)</a><br />
+
+    <a href="classes/ActionController/Instrumentation.html#M000233">send_data (ActionController::Instrumentation)</a><br />
+
+    <a href="classes/ActionController/Railties/LogSubscriber.html#M000278">send_data (ActionController::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionController/Streaming.html#M000263">send_file (ActionController::Streaming)</a><br />
+
+    <a href="classes/ActionController/Railties/LogSubscriber.html#M000276">send_file (ActionController::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActionController/Instrumentation.html#M000232">send_file (ActionController::Instrumentation)</a><br />
+
+    <a href="classes/ActiveModel/Serialization.html#M000705">serializable_hash (ActiveModel::Serialization)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000305">session (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000306">session= (ActionController::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/ClassMethods.html#M000842">set_callback (ActiveSupport::Callbacks::ClassMethods)</a><br />
+
+    <a href="classes/ActionMailer/Base.html#M000161">set_content_type (ActionMailer::Base)</a><br />
+
+    <a href="classes/ActiveSupport/JSON.html#M000908">set_default_backend (ActiveSupport::JSON)</a><br />
+
+    <a href="classes/ActionController/Testing.html#M000266">set_test_assigns (ActionController::Testing)</a><br />
+
+    <a href="classes/ActiveModel/Validations/AcceptanceValidator.html#M000735">setup (ActiveModel::Validations::AcceptanceValidator)</a><br />
+
+    <a href="classes/ActionView/Partials/PartialRenderer.html#M000593">setup (ActionView::Partials::PartialRenderer)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/SetupAndTeardown/ClassMethods.html#M001055">setup (ActiveSupport::Testing::SetupAndTeardown::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ConfirmationValidator.html#M000737">setup (ActiveModel::Validations::ConfirmationValidator)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000368">setup_controller_request_and_response (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionController/TemplateAssertions.html#M000286">setup_subscriptions (ActionController::TemplateAssertions)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000649">setup_with_controller (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000525">show (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001103">silence (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActiveSupport/Benchmarkable.html#M000786">silence (ActiveSupport::Benchmarkable)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000829">silence! (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/Kernel.html#M001255">silence_stream (Kernel)</a><br />
+
+    <a href="classes/Kernel.html#M001252">silence_warnings (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/BufferedLogger.html#M001102">silencer (ActiveSupport::BufferedLogger)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000568">simple_format (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/HTML/Selector.html#M000392">simple_selector (HTML::Selector)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001201">since (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000092">since (Time)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001123">since (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/DateTime.html#M000016">since (DateTime)</a><br />
+
+    <a href="classes/Kernel.html#M001258">singleton_class (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000900">singular (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActionController/RecordIdentifier.html#M000285">singular_class_name (ActionController::RecordIdentifier)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000883">singularize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000757">size (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000947">size (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/ClassMethods.html#M000843">skip_callback (ActiveSupport::Callbacks::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/LookupContext/Details.html#M000612">skip_default_locale! (ActionView::LookupContext::Details)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000950">slice (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000952">slice! (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000536">sortable (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/ScriptaculousHelper.html#M000550">sortable_element (ActionView::Helpers::ScriptaculousHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000935">split (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionController/ConditionalGet.html#M000190">stale? (ActionController::ConditionalGet)</a><br />
+
+    <a href="classes/ActiveSupport/Callbacks/Callback.html#M000855">start (ActiveSupport::Callbacks::Callback)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001087">start_document (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini_NokogiriSAX/HashBuilder.html#M001090">start_element (ActiveSupport::XmlMini_NokogiriSAX::HashBuilder)</a><br />
+
+    <a href="classes/ActionController/Railties/LogSubscriber.html#M000274">start_processing (ActionController::Railties::LogSubscriber)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemCacheStore.html#M000811">stats (ActiveSupport::Cache::MemCacheStore)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000337">status (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000338">status= (ActionController::Metal)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001192">strftime (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001141">stringify_keys! (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000946">strip (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionView/Helpers/SanitizeHelper.html#M000548">strip_links (ActionView::Helpers::SanitizeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/SanitizeHelper.html#M000547">strip_tags (ActionView::Helpers::SanitizeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000410">stylesheet_link_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000408">stylesheet_path (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000291">subclasses (ActionController::Base)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000489">submit_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Notifier.html#M000991">subscribe (ActiveSupport::Notifications::Notifier)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Fanout.html#M000980">subscribe (ActiveSupport::Notifications::Fanout)</a><br />
+
+    <a href="classes/Enumerable.html#M001244">sum (Enumerable)</a><br />
+
+    <a href="classes/Kernel.html#M001256">suppress (Kernel)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001142">symbolize_keys! (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/Helpers/TranslationHelper.html#M000574">t (ActionView::Helpers::TranslationHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000886">tableize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionView/Helpers/TagHelper.html#M000554">tag (ActionView::Helpers::TagHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/SetupAndTeardown/ClassMethods.html#M001056">teardown (ActiveSupport::Testing::SetupAndTeardown::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/TemplateAssertions.html#M000287">teardown_subscriptions (ActionController::TemplateAssertions)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000460">telephone_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000493">telephone_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000609">template_exists? (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Declarative.html#M001013">test (ActiveSupport::Testing::Declarative)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000695">test_errors_aref (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000696">test_errors_full_messages (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000694">test_model_naming (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000693">test_persisted? (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000690">test_to_key (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000691">test_to_param (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActiveModel/Lint/Tests.html#M000692">test_valid? (ActiveModel::Lint::Tests)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000363">tests (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionView/TestCase.html#M000653">tests (ActionView::TestCase)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000456">text_area (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000486">text_area_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000452">text_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000481">text_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000565">textilize (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000566">textilize_without_paragraph (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000962">tidy_bytes (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000970">tidy_bytes (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001163">time (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000434">time_ago_in_words (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/DateHelper.html#M000437">time_select (ActionView::Helpers::DateHelper)</a><br />
+
+    <a href="classes/Time.html#M000082">time_with_datetime_fallback (Time)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000478">time_zone_options_for_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormOptionsHelper.html#M000473">time_zone_select (ActionView::Helpers::FormOptionsHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000885">titleize (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000341">to_a (ActionController::Metal)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000758">to_a (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001205">to_a (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000138">to_date (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000037">to_date (DateTime)</a><br />
+
+    <a href="classes/DateTime.html#M000039">to_datetime (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000140">to_datetime (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001211">to_datetime (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000032">to_default_s (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000136">to_default_s (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001206">to_f (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000041">to_f (DateTime)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000321">to_format (ActionController::Responder)</a><br />
+
+    <a href="classes/BigDecimal.html#M000003">to_formatted_s (BigDecimal)</a><br />
+
+    <a href="classes/Time.html#M000134">to_formatted_s (Time)</a><br />
+
+    <a href="classes/DateTime.html#M000030">to_formatted_s (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001191">to_formatted_s (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001144">to_hash (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionController/Responder.html#M000320">to_html (ActionController::Responder)</a><br />
+
+    <a href="classes/DateTime.html#M000042">to_i (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001207">to_i (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Object.html#M000065">to_json (Object)</a><br />
+
+    <a href="classes/ActiveModel/Conversion.html#M000679">to_key (ActiveModel::Conversion)</a><br />
+
+    <a href="classes/ActiveModel/Conversion.html#M000678">to_model (ActiveModel::Conversion)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001143">to_options! (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActiveModel/Conversion.html#M000680">to_param (ActiveModel::Conversion)</a><br />
+
+    <a href="classes/Object.html#M000060">to_param (Object)</a><br />
+
+    <a href="classes/ActionView/PathResolver.html#M000645">to_path (ActionView::PathResolver)</a><br />
+
+    <a href="classes/ActionController/Dispatcher.html#M000315">to_prepare (ActionController::Dispatcher)</a><br />
+
+    <a href="classes/Object.html#M000061">to_query (Object)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001226">to_s (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/Time.html#M000135">to_s (Time)</a><br />
+
+    <a href="classes/ActionView/PathResolver.html#M000644">to_s (ActionView::PathResolver)</a><br />
+
+    <a href="classes/DateTime.html#M000031">to_s (DateTime)</a><br />
+
+    <a href="classes/BigDecimal.html#M000004">to_s (BigDecimal)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001190">to_s (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001118">to_s (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/DateTime.html#M000038">to_time (DateTime)</a><br />
+
+    <a href="classes/Time.html#M000139">to_time (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001210">to_time (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveModel/Serializers/Xml.html#M000709">to_xml (ActiveModel::Serializers::Xml)</a><br />
+
+    <a href="classes/ActiveModel/Errors.html#M000761">to_xml (ActiveModel::Errors)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001186">to_yaml (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/SafeBuffer.html#M001119">to_yaml (ActiveSupport::SafeBuffer)</a><br />
+
+    <a href="classes/BigDecimal.html#M000002">to_yaml (BigDecimal)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001231">today (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/Time.html#M000086">today? (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001196">today? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000527">toggle (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/HTML/WhiteListSanitizer.html#M000381">tokenize (HTML::WhiteListSanitizer)</a><br />
+
+    <a href="classes/HTML/Sanitizer.html#M000374">tokenize (HTML::Sanitizer)</a><br />
+
+    <a href="classes/Time.html#M000126">tomorrow (Time)</a><br />
+
+    <a href="classes/ActionView/Helpers/TranslationHelper.html#M000573">translate (ActionView::Helpers::TranslationHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000895">transliterate (ActiveSupport::Inflector)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000560">truncate (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000304">trusted_proxies (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000303">trusted_proxies= (ActionController::Base)</a><br />
+
+    <a href="classes/Object.html#M000062">try (Object)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001209">tv_sec (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001236">tzinfo (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000963">u_unpack (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector/Inflections.html#M000902">uncountable (ActiveSupport::Inflector::Inflections)</a><br />
+
+    <a href="classes/ActiveModel/AttributeMethods/ClassMethods.html#M000669">undefine_attribute_methods (ActiveModel::AttributeMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Inflector.html#M000889">underscore (ActiveSupport::Inflector)</a><br />
+
+    <a href="files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activesupport/lib/active_support/core_ext/uri_rb.html#M000001">unescape (/Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activesupport/lib/active_support/core_ext/uri.rb)</a><br />
+
+    <a href="classes/ActiveSupport/Memoizable/InstanceMethods.html#M000923">unmemoize_all (ActiveSupport::Memoizable::InstanceMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Notifier.html#M000992">unsubscribe (ActiveSupport::Notifications::Notifier)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Fanout.html#M000981">unsubscribe (ActiveSupport::Notifications::Fanout)</a><br />
+
+    <a href="classes/ActiveSupport/Duration.html#M001126">until (ActiveSupport::Duration)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000955">upcase (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001132">update (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/LookupContext/Details.html#M000615">update_details (ActionView::LookupContext::Details)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000512">update_page (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper.html#M000513">update_page_tag (ActionView::Helpers::PrototypeHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AtomFeedHelper/AtomFeedBuilder.html#M000426">updated (ActionView::Helpers::AtomFeedHelper::AtomFeedBuilder)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormHelper.html#M000462">url_field (ActionView::Helpers::FormHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/FormTagHelper.html#M000495">url_field_tag (ActionView::Helpers::FormTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000578">url_for (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/UrlHelper.html#M000577">url_options (ActionView::Helpers::UrlHelper)</a><br />
+
+    <a href="classes/ActionController/UrlFor.html#M000269">url_options (ActionController::UrlFor)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001242">us_zones (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActionController/Metal.html#M000343">use (ActionController::Metal)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000309">use_accept_header (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000310">use_accept_header= (ActionController::Base)</a><br />
+
+    <a href="classes/ActionController/Renderers/ClassMethods.html#M000246">use_renderer (ActionController::Renderers::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/Renderers/ClassMethods.html#M000245">use_renderers (ActionController::Renderers::ClassMethods)</a><br />
+
+    <a href="classes/Time.html#M000151">use_zone (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001204">usec (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Basic.html#M000204">user_name_and_password (ActionController::HttpAuthentication::Basic)</a><br />
+
+    <a href="classes/DateTime.html#M000023">utc (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001164">utc (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000025">utc? (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001175">utc? (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001177">utc_offset (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000026">utc_offset (DateTime)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001222">utc_offset (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/Time.html#M000083">utc_time (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeZone.html#M001232">utc_to_local (ActiveSupport::TimeZone)</a><br />
+
+    <a href="classes/ActiveModel/Validations.html#M000716">valid? (ActiveModel::Validations)</a><br />
+
+    <a href="classes/ActiveModel/EachValidator.html#M000778">validate (ActiveModel::EachValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/PresenceValidator.html#M000751">validate (ActiveModel::Validations::PresenceValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validator.html#M000776">validate (ActiveModel::Validator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000730">validate (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000212">validate_digest_response (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActiveModel/Validations/NumericalityValidator.html#M000749">validate_each (ActiveModel::Validations::NumericalityValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/AcceptanceValidator.html#M000734">validate_each (ActiveModel::Validations::AcceptanceValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ConfirmationValidator.html#M000736">validate_each (ActiveModel::Validations::ConfirmationValidator)</a><br />
+
+    <a href="classes/ActiveModel/EachValidator.html#M000779">validate_each (ActiveModel::EachValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/InclusionValidator.html#M000743">validate_each (ActiveModel::Validations::InclusionValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/FormatValidator.html#M000740">validate_each (ActiveModel::Validations::FormatValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/LengthValidator.html#M000746">validate_each (ActiveModel::Validations::LengthValidator)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ExclusionValidator.html#M000739">validate_each (ActiveModel::Validations::ExclusionValidator)</a><br />
+
+    <a href="classes/I18n/Railtie.html#M001263">validate_fallbacks (I18n::Railtie)</a><br />
+
+    <a href="classes/ActionController/HttpAuthentication/Digest.html#M000222">validate_nonce (ActionController::HttpAuthentication::Digest)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000727">validates (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000718">validates_acceptance_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000719">validates_confirmation_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000729">validates_each (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000720">validates_exclusion_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000721">validates_format_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000722">validates_inclusion_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000723">validates_length_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000725">validates_numericality_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000726">validates_presence_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000724">validates_size_of (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000728">validates_with (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000731">validators (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActiveModel/Validations/ClassMethods.html#M000732">validators_on (ActiveModel::Validations::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/InstanceTagMethods/ClassMethods.html#M000466">value (ActionView::Helpers::InstanceTagMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/InstanceTagMethods/ClassMethods.html#M000467">value_before_type_cast (ActionView::Helpers::InstanceTagMethods::ClassMethods)</a><br />
+
+    <a href="classes/ActiveSupport/HashWithIndifferentAccess.html#M001135">values_at (ActiveSupport::HashWithIndifferentAccess)</a><br />
+
+    <a href="classes/ActionView/Template.html#M000619">variable_name (ActionView::Template)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000254">verified_request? (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/ActiveSupport/MessageVerifier.html#M001153">verify (ActiveSupport::MessageVerifier)</a><br />
+
+    <a href="classes/ActionController/Base/DeprecatedBehavior.html#M000312">verify (ActionController::Base::DeprecatedBehavior)</a><br />
+
+    <a href="classes/ActionController/RequestForgeryProtection.html#M000253">verify_authenticity_token (ActionController::RequestForgeryProtection)</a><br />
+
+    <a href="classes/Rails.html#M001278">version (Rails)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000414">video_path (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/AssetTagHelper.html#M000419">video_tag (ActionView::Helpers::AssetTagHelper)</a><br />
+
+    <a href="classes/ActionView/Base.html#M000600">view_context (ActionView::Base)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000604">view_paths= (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActionController/HideActions/ClassMethods.html#M000201">visible_action? (ActionController::HideActions::ClassMethods)</a><br />
+
+    <a href="classes/ActionView/Helpers/ScriptaculousHelper.html#M000549">visual_effect (ActionView::Helpers::ScriptaculousHelper)</a><br />
+
+    <a href="classes/ActionView/Helpers/PrototypeHelper/JavaScriptGenerator/GeneratorMethods.html#M000535">visual_effect (ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Fanout.html#M000983">wait (ActiveSupport::Notifications::Fanout)</a><br />
+
+    <a href="classes/ActiveSupport/Notifications/Notifier.html#M000993">wait (ActiveSupport::Notifications::Notifier)</a><br />
+
+    <a href="classes/ActiveSupport/Multibyte/Chars.html#M000930">wants? (ActiveSupport::Multibyte::Chars)</a><br />
+
+    <a href="classes/ActionController/Railties/UrlHelpers.html#M000273">with (ActionController::Railties::UrlHelpers)</a><br />
+
+    <a href="classes/ActiveSupport/JSON.html#M000907">with_backend (ActiveSupport::JSON)</a><br />
+
+    <a href="classes/ActiveSupport/XmlMini.html#M001095">with_backend (ActiveSupport::XmlMini)</a><br />
+
+    <a href="classes/ActionView/LookupContext/ViewPaths.html#M000610">with_fallbacks (ActionView::LookupContext::ViewPaths)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001030">with_gc_stats (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001028">with_gc_stats (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Metrics/Base.html#M001029">with_gc_stats (ActiveSupport::Testing::Metrics::Base)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000789">with_local_cache (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/Object.html#M000063">with_options (Object)</a><br />
+
+    <a href="classes/ActiveSupport/Testing/Benchmarker.html#M001070">with_output_file (ActiveSupport::Testing::Benchmarker)</a><br />
+
+    <a href="classes/Kernel.html#M001254">with_warnings (Kernel)</a><br />
+
+    <a href="classes/ActionController/Base.html#M000289">without_modules (ActionController::Base)</a><br />
+
+    <a href="classes/ActionView/Helpers/TextHelper.html#M000564">word_wrap (ActionView::Helpers::TextHelper)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemoryStore.html#M000814">write (ActiveSupport::Cache::MemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/MemCacheStore.html#M000809">write (ActiveSupport::Cache::MemCacheStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Store.html#M000835">write (ActiveSupport::Cache::Store)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/Strategy/LocalCache.html#M000792">write (ActiveSupport::Cache::Strategy::LocalCache)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/CompressedMemCacheStore.html#M000799">write (ActiveSupport::Cache::CompressedMemCacheStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/SynchronizedMemoryStore.html#M000822">write (ActiveSupport::Cache::SynchronizedMemoryStore)</a><br />
+
+    <a href="classes/ActiveSupport/Cache/FileStore.html#M000802">write (ActiveSupport::Cache::FileStore)</a><br />
+
+    <a href="classes/ActionController/Caching/Fragments.html#M000169">write_fragment (ActionController::Caching::Fragments)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000361">xhr (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActionController/TestCase.html#M000360">xml_http_request (ActionController::TestCase)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001183">xmlschema (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/DateTime.html#M000040">xmlschema (DateTime)</a><br />
+
+    <a href="classes/Integer.html#M000052">year (Integer)</a><br />
+
+    <a href="classes/Integer.html#M000051">years (Integer)</a><br />
+
+    <a href="classes/Time.html#M000096">years_ago (Time)</a><br />
+
+    <a href="classes/Time.html#M000097">years_since (Time)</a><br />
+
+    <a href="classes/Time.html#M000125">yesterday (Time)</a><br />
+
+    <a href="classes/Time.html#M000149">zone (Time)</a><br />
+
+    <a href="classes/ActiveSupport/TimeWithZone.html#M001181">zone (ActiveSupport::TimeWithZone)</a><br />
+
+    <a href="classes/Time.html#M000150">zone= (Time)</a><br />
+
+  </div>
+</div>
+</body>
+</html>

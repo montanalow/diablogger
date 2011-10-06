@@ -1,0 +1,12 @@
+<%= form_for @diablog, :url => diablogs_create_submit_url do |diablog| %>
+  <%= fields_for @diablog.creator do |creator| -%>
+    <%= creator.label :email %>
+    <%= creator.text_field :email %>
+  <% end %>
+  <%= diablog.label :subject %>
+  <%= diablog.text_field :subject %>
+  <%= fields_for @diablog.posts.first do |post| -%>
+    <%= post.text_area :body %>
+  <% end %>
+  <%= diablog.submit 'Create' %>
+<% end %>

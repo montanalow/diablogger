@@ -1,0 +1,8 @@
+<% form_tag :url => diablog_create_submit_url do |diablog| %>
+  <%= diablog.label :email %>
+  <%= diablog.text_field :email, @diablog.user.email %>
+  <%= diablog.label :subject %>
+  <%= diablog.text_field :subject, @diablog.subject %>
+  <%= diablog.text_area :post %>
+  <%= diablog.submit 'Create' %>
+<% end %>

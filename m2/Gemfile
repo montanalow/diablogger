@@ -1,0 +1,32 @@
+source 'http://rubygems.org'
+
+gem 'rack', '~> 1.1.0'
+
+datamapper = 'git://github.com/datamapper'
+datamapper_version = '~> 1.0.0.rc2'
+gem 'dm-sqlite-adapter', datamapper_version, :git => "#{datamapper}/dm-sqlite-adapter.git"
+# gem 'dm-mysql-adapter',     '~> 0.10.3', :git => "#{datamapper}/dm-mysql-adapter.git"
+# gem 'dm-postgres-adapter',  '~> 0.10.3', :git => "#{datamapper}/dm-postgres-adapter.git"
+
+gem 'dm-migrations', datamapper_version, :git => "#{datamapper}/dm-migrations.git"
+gem 'dm-types', datamapper_version, :git => "#{datamapper}/dm-types.git"
+gem 'dm-validations', datamapper_version, :git => "#{datamapper}/dm-validations.git"
+gem 'dm-constraints', datamapper_version, :git => "#{datamapper}/dm-constraints.git"
+gem 'dm-transactions', datamapper_version, :git => "#{datamapper}/dm-transactions.git"
+gem 'dm-aggregates', datamapper_version, :git => "#{datamapper}/dm-aggregates.git"
+gem 'dm-timestamps', datamapper_version, :git => "#{datamapper}/dm-timestamps.git"
+gem 'dm-observer', datamapper_version, :git => "#{datamapper}/dm-observer.git"
+gem 'dm-serializer', datamapper_version, :git => "#{datamapper}/dm-serializer.git"
+gem 'dm-core', datamapper_version, :git => "#{datamapper}/dm-core.git"
+gem 'dm-do-adapter', datamapper_version, :git => "#{datamapper}/dm-do-adapter.git"
+
+gem 'erector'#, '~> 0.7.3', :git => "git://github.com/pivotal/erector"
+gem 'activesupport', '~> 3.0.0.beta3', :git => 'git://github.com/rails/rails.git' # unfortunately erector >= 0.7.2 requires activesupport inflector
+
+group :test do
+  gem 'rspec',              '2.0.0.beta.8', :git => "git://github.com/rspec/rspec.git"
+  gem 'rspec-core',         '2.0.0.beta.8', :git => "git://github.com/rspec/rspec-core.git",         :require => 'rspec/core'
+  gem 'rspec-expectations', '2.0.0.beta.8', :git => "git://github.com/rspec/rspec-expectations.git", :require => 'rspec/expectations'
+  gem 'rspec-mocks',        '2.0.0.beta.8', :git => "git://github.com/rspec/rspec-mocks.git",        :require => 'rspec/mocks'
+end
+

@@ -1,0 +1,1222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods [Rails Framework Documentation]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }<\/style>" )
+
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">ActionView::Helpers::PrototypeHelper::JavaScriptGenerator::GeneratorMethods</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+
+
+                <a href="../../../../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../../../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/scriptaculous_helper_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/scriptaculous_helper.rb
+
+                </a>
+
+
+        <br />
+
+            </td>
+        </tr>
+
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+JavaScriptGenerator generates blocks of JavaScript code that allow you to
+change the content and presentation of multiple DOM elements. Use this in
+your Ajax response bodies, either in a <script> tag or as plain JavaScript
+sent with a Content-type of &#8220;text/javascript&#8220;.
+</p>
+<p>
+Create new instances with <a
+href="../../PrototypeHelper.html#M000512">PrototypeHelper#update_page</a>
+or with ActionController::Base#render, then call <tt><a
+href="GeneratorMethods.html#M000521">insert_html</a></tt>, <tt><a
+href="GeneratorMethods.html#M000522">replace_html</a></tt>,
+<tt>remove</tt>, <tt>show</tt>, <tt>hide</tt>, <tt><a
+href="GeneratorMethods.html#M000535">visual_effect</a></tt>, or any other
+of the built-in methods on the yielded generator in any order you like to
+modify the content and appearance of the current page.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  # Generates:
+  #     new Element.insert(&quot;list&quot;, { bottom: &quot;&lt;li&gt;Some item&lt;/li&gt;&quot; });
+  #     new Effect.Highlight(&quot;list&quot;);
+  #     [&quot;status-indicator&quot;, &quot;cancel-link&quot;].each(Element.hide);
+  update_page do |page|
+    page.insert_html :bottom, 'list', &quot;&lt;li&gt;#{@item.name}&lt;/li&gt;&quot;
+    page.visual_effect :highlight, 'list'
+    page.hide 'status-indicator', 'cancel-link'
+  end
+</pre>
+<p>
+Helper methods can be used in conjunction with JavaScriptGenerator. When a
+helper method is called inside an update block on the <tt>page</tt> object,
+that method will also have access to a <tt>page</tt> object.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  module ApplicationHelper
+    def update_time
+      page.replace_html 'time', Time.now.to_s(:db)
+      page.visual_effect :highlight, 'time'
+    end
+  end
+
+  # Controller action
+  def poll
+    render(:update) { |page| page.update_time }
+  end
+</pre>
+<p>
+Calls to JavaScriptGenerator not matching a helper method below generate a
+proxy to the JavaScript Class named by the method called.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # Generates:
+  #     Foo.init();
+  update_page do |page|
+    page.foo.init
+  end
+
+  # Generates:
+  #     Event.observe('one', 'click', function () {
+  #       $('two').show();
+  #     });
+  update_page do |page|
+    page.event.observe('one', 'click') do |p|
+     p[:two].show
+    end
+  end
+</pre>
+<p>
+You can also use <a
+href="../../PrototypeHelper.html#M000513">PrototypeHelper#update_page_tag</a>
+instead of <a
+href="../../PrototypeHelper.html#M000512">PrototypeHelper#update_page</a>
+to wrap the generated JavaScript in a <script> tag.
+</p>
+
+    </div>
+
+   </div>
+
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+
+        <a href="#M000533">&lt;&lt;</a>&nbsp;&nbsp;
+
+        <a href="#M000518">[]</a>&nbsp;&nbsp;
+
+        <a href="#M000528">alert</a>&nbsp;&nbsp;
+
+        <a href="#M000532">assign</a>&nbsp;&nbsp;
+
+        <a href="#M000531">call</a>&nbsp;&nbsp;
+
+        <a href="#M000534">delay</a>&nbsp;&nbsp;
+
+        <a href="#M000537">draggable</a>&nbsp;&nbsp;
+
+        <a href="#M000538">drop_receiving</a>&nbsp;&nbsp;
+
+        <a href="#M000526">hide</a>&nbsp;&nbsp;
+
+        <a href="#M000521">insert_html</a>&nbsp;&nbsp;
+
+        <a href="#M000519">literal</a>&nbsp;&nbsp;
+
+        <a href="#M000529">redirect_to</a>&nbsp;&nbsp;
+
+        <a href="#M000530">reload</a>&nbsp;&nbsp;
+
+        <a href="#M000524">remove</a>&nbsp;&nbsp;
+
+        <a href="#M000523">replace</a>&nbsp;&nbsp;
+
+        <a href="#M000522">replace_html</a>&nbsp;&nbsp;
+
+        <a href="#M000520">select</a>&nbsp;&nbsp;
+
+        <a href="#M000525">show</a>&nbsp;&nbsp;
+
+        <a href="#M000536">sortable</a>&nbsp;&nbsp;
+
+        <a href="#M000527">toggle</a>&nbsp;&nbsp;
+
+        <a href="#M000535">visual_effect</a>&nbsp;&nbsp;
+
+      </div>
+    </div>
+
+  </div>
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+    <!-- if method_list -->
+
+    <div id="methods">
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+
+      <div id="method-M000533" class="method-detail">
+        <a name="M000533"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000533" class="method-signature">
+
+          <span class="method-name">&lt;&lt;</span><span class="method-args">(javascript)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Writes raw JavaScript to the page.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ page &lt;&lt; &quot;alert('JavaScript with Prototype.');&quot;
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000533-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000533-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 502</span>
+502:           <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">javascript</span>)
+503:             <span class="ruby-ivar">@lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">javascript</span>
+504:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000518" class="method-detail">
+        <a name="M000518"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000518" class="method-signature">
+
+          <span class="method-name">[]</span><span class="method-args">(id)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Returns a element reference by finding it through <tt>id</tt> in the DOM.
+This element can then be used for further method calls. Examples:
+</p>
+<pre>
+  page['blank_slate']                  # =&gt; $('blank_slate');
+  page['blank_slate'].show             # =&gt; $('blank_slate').show();
+  page['blank_slate'].show('first').up # =&gt; $('blank_slate').show('first').up();
+</pre>
+<p>
+You can also pass in a record, which will use <a
+href="../../../../ActionController/RecordIdentifier.html#M000281">ActionController::RecordIdentifier.dom_id</a>
+to lookup the correct id:
+</p>
+<pre>
+  page[@post]     # =&gt; $('post_45')
+  page[Post.new]  # =&gt; $('new_post')
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000518-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000518-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 253</span>
+253:           <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">id</span>)
+254:             <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">id</span>
+255:               <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>, <span class="ruby-constant">Symbol</span>, <span class="ruby-constant">NilClass</span>
+256:                 <span class="ruby-constant">JavaScriptElementProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">id</span>)
+257:               <span class="ruby-keyword kw">else</span>
+258:                 <span class="ruby-constant">JavaScriptElementProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordIdentifier</span>.<span class="ruby-identifier">dom_id</span>(<span class="ruby-identifier">id</span>))
+259:             <span class="ruby-keyword kw">end</span>
+260:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000528" class="method-detail">
+        <a name="M000528"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000528" class="method-signature">
+
+          <span class="method-name">alert</span><span class="method-args">(message)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Displays an alert dialog with the given <tt>message</tt>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  # Generates: alert('This message is from Rails!')
+  page.alert('This message is from Rails!')
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000528-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000528-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 425</span>
+425:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alert</span>(<span class="ruby-identifier">message</span>)
+426:             <span class="ruby-identifier">call</span> <span class="ruby-value str">'alert'</span>, <span class="ruby-identifier">message</span>
+427:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000532" class="method-detail">
+        <a name="M000532"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000532" class="method-signature">
+
+          <span class="method-name">assign</span><span class="method-args">(variable, value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Assigns the JavaScript <tt>variable</tt> the given <tt>value</tt>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+ # Generates: my_string = &quot;This is mine!&quot;;
+ page.assign 'my_string', 'This is mine!'
+
+ # Generates: record_count = 33;
+ page.assign 'record_count', 33
+
+ # Generates: tabulated_total = 47
+ page.assign 'tabulated_total', @total_from_cart
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000532-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000532-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 493</span>
+493:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assign</span>(<span class="ruby-identifier">variable</span>, <span class="ruby-identifier">value</span>)
+494:             <span class="ruby-identifier">record</span> <span class="ruby-node">&quot;#{variable} = #{javascript_object_for(value)}&quot;</span>
+495:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000531" class="method-detail">
+        <a name="M000531"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000531" class="method-signature">
+
+          <span class="method-name">call</span><span class="method-args">(function, *arguments, &amp;block)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Calls the JavaScript <tt>function</tt>, optionally with the given
+<tt>arguments</tt>.
+</p>
+<p>
+If a block is given, the block will be passed to a new JavaScriptGenerator;
+the resulting JavaScript code will then be wrapped inside <tt>function() {
+... }</tt> and passed as the called function&#8217;s final argument.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  # Generates: Element.replace(my_element, &quot;My content to replace with.&quot;)
+  page.call 'Element.replace', 'my_element', &quot;My content to replace with.&quot;
+
+  # Generates: alert('My message!')
+  page.call 'alert', 'My message!'
+
+  # Generates:
+  #     my_method(function() {
+  #       $(&quot;one&quot;).show();
+  #       $(&quot;two&quot;).hide();
+  #    });
+  page.call(:my_method) do |p|
+     p[:one].show
+     p[:two].hide
+  end
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000531-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000531-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 476</span>
+476:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(<span class="ruby-identifier">function</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arguments</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+477:             <span class="ruby-identifier">record</span> <span class="ruby-node">&quot;#{function}(#{arguments_for_call(arguments, block)})&quot;</span>
+478:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000534" class="method-detail">
+        <a name="M000534"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000534" class="method-signature">
+
+          <span class="method-name">delay</span><span class="method-args">(seconds = 1) {|| ...}</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Executes the content of the block after a delay of <tt>seconds</tt>.
+Example:
+</p>
+<pre>
+  # Generates:
+  #     setTimeout(function() {
+  #     ;
+  #     new Effect.Fade(&quot;notice&quot;,{});
+  #     }, 20000);
+  page.delay(20) do
+    page.visual_effect :fade, 'notice'
+  end
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000534-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000534-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 516</span>
+516:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delay</span>(<span class="ruby-identifier">seconds</span> = <span class="ruby-value">1</span>)
+517:             <span class="ruby-identifier">record</span> <span class="ruby-value str">&quot;setTimeout(function() {\n\n&quot;</span>
+518:             <span class="ruby-keyword kw">yield</span>
+519:             <span class="ruby-identifier">record</span> <span class="ruby-node">&quot;}, #{(seconds * 1000).to_i})&quot;</span>
+520:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000537" class="method-detail">
+        <a name="M000537"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000537" class="method-signature">
+
+          <span class="method-name">draggable</span><span class="method-args">(id, options = {})</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Creates a script.aculo.us draggable element. See <a
+href="../../ScriptaculousHelper.html">ActionView::Helpers::ScriptaculousHelper</a>
+for more information.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000537-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000537-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/scriptaculous_helper.rb, line 249</span>
+249:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">draggable</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span> = {})
+250:             <span class="ruby-identifier">record</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">:draggable_element_js</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span>)
+251:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000538" class="method-detail">
+        <a name="M000538"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000538" class="method-signature">
+
+          <span class="method-name">drop_receiving</span><span class="method-args">(id, options = {})</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Creates a script.aculo.us drop receiving element. See <a
+href="../../ScriptaculousHelper.html">ActionView::Helpers::ScriptaculousHelper</a>
+for more information.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000538-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000538-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/scriptaculous_helper.rb, line 255</span>
+255:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">drop_receiving</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span> = {})
+256:             <span class="ruby-identifier">record</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">:drop_receiving_element_js</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span>)
+257:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000526" class="method-detail">
+        <a name="M000526"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000526" class="method-signature">
+
+          <span class="method-name">hide</span><span class="method-args">(*ids)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Hides the visible DOM elements with the given <tt>ids</tt>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ # Hide a few people
+ # Generates: [&quot;person_29&quot;, &quot;person_9&quot;, &quot;person_0&quot;].each(Element.hide);
+ page.hide 'person_29', 'person_9', 'person_0'
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000526-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000526-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 403</span>
+403:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hide</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ids</span>)
+404:             <span class="ruby-identifier">loop_on_multiple_args</span> <span class="ruby-value str">'Element.hide'</span>, <span class="ruby-identifier">ids</span>
+405:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000521" class="method-detail">
+        <a name="M000521"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000521" class="method-signature">
+
+          <span class="method-name">insert_html</span><span class="method-args">(position, id, *options_for_render)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Inserts HTML at the specified <tt>position</tt> relative to the DOM element
+identified by the given <tt>id</tt>.
+</p>
+<p>
+<tt>position</tt> may be one of:
+</p>
+<table>
+<tr><td valign="top"><tt>:top</tt>:</td><td>HTML is inserted inside the element, before the element&#8217;s existing
+content.
+
+</td></tr>
+<tr><td valign="top"><tt>:bottom</tt>:</td><td>HTML is inserted inside the element, after the element&#8217;s existing
+content.
+
+</td></tr>
+<tr><td valign="top"><tt>:before</tt>:</td><td>HTML is inserted immediately preceding the element.
+
+</td></tr>
+<tr><td valign="top"><tt>:after</tt>:</td><td>HTML is inserted immediately following the element.
+
+</td></tr>
+</table>
+<p>
+<tt>options_for_render</tt> may be either a string of HTML to insert, or a
+hash of options to be passed to ActionView::Base#render. For example:
+</p>
+<pre>
+  # Insert the rendered 'navigation' partial just before the DOM
+  # element with ID 'content'.
+  # Generates: Element.insert(&quot;content&quot;, { before: &quot;-- Contents of 'navigation' partial --&quot; });
+  page.insert_html :before, 'content', :partial =&gt; 'navigation'
+
+  # Add a list item to the bottom of the &lt;ul&gt; with ID 'list'.
+  # Generates: Element.insert(&quot;list&quot;, { bottom: &quot;&lt;li&gt;Last item&lt;/li&gt;&quot; });
+  page.insert_html :bottom, 'list', '&lt;li&gt;Last item&lt;/li&gt;'
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000521-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000521-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 318</span>
+318:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert_html</span>(<span class="ruby-identifier">position</span>, <span class="ruby-identifier">id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">options_for_render</span>)
+319:             <span class="ruby-identifier">content</span> = <span class="ruby-identifier">javascript_object_for</span>(<span class="ruby-identifier">render</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">options_for_render</span>))
+320:             <span class="ruby-identifier">record</span> <span class="ruby-node">&quot;Element.insert(\&quot;#{id}\&quot;, { #{position.to_s.downcase}: #{content} });&quot;</span>
+321:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000519" class="method-detail">
+        <a name="M000519"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000519" class="method-signature">
+
+          <span class="method-name">literal</span><span class="method-args">(code)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Returns an object whose <tt>to_json</tt> evaluates to <tt>code</tt>. Use
+this to pass a literal JavaScript expression as an argument to another
+JavaScriptGenerator method.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000519-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000519-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 264</span>
+264:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">literal</span>(<span class="ruby-identifier">code</span>)
+265:             <span class="ruby-operator">::</span><span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">JSON</span><span class="ruby-operator">::</span><span class="ruby-constant">Variable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">code</span>.<span class="ruby-identifier">to_s</span>)
+266:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000529" class="method-detail">
+        <a name="M000529"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000529" class="method-signature">
+
+          <span class="method-name">redirect_to</span><span class="method-args">(location)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Redirects the browser to the given <tt>location</tt> using JavaScript, in
+the same form as <tt>url_for</tt>.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+ # Generates: window.location.href = &quot;/mycontroller&quot;;
+ page.redirect_to(:action =&gt; 'index')
+
+ # Generates: window.location.href = &quot;/account/signup&quot;;
+ page.redirect_to(:controller =&gt; 'account', :action =&gt; 'signup')
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000529-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000529-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 438</span>
+438:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">location</span>)
+439:             <span class="ruby-identifier">url</span> = <span class="ruby-identifier">location</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">location</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">url_for</span>(<span class="ruby-identifier">location</span>)
+440:             <span class="ruby-identifier">record</span> <span class="ruby-node">&quot;window.location.href = #{url.inspect}&quot;</span>
+441:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000530" class="method-detail">
+        <a name="M000530"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000530" class="method-signature">
+
+          <span class="method-name">reload</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Reloads the browser&#8217;s current <tt>location</tt> using JavaScript
+</p>
+<p>
+Examples:
+</p>
+<pre>
+ # Generates: window.location.reload();
+ page.reload
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000530-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000530-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 449</span>
+449:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reload</span>
+450:             <span class="ruby-identifier">record</span> <span class="ruby-value str">'window.location.reload()'</span>
+451:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000524" class="method-detail">
+        <a name="M000524"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000524" class="method-signature">
+
+          <span class="method-name">remove</span><span class="method-args">(*ids)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Removes the DOM elements with the given <tt>ids</tt> from the page.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ # Remove a few people
+ # Generates: [&quot;person_23&quot;, &quot;person_9&quot;, &quot;person_2&quot;].each(Element.remove);
+ page.remove 'person_23', 'person_9', 'person_2'
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000524-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000524-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 379</span>
+379:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ids</span>)
+380:             <span class="ruby-identifier">loop_on_multiple_args</span> <span class="ruby-value str">'Element.remove'</span>, <span class="ruby-identifier">ids</span>
+381:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000523" class="method-detail">
+        <a name="M000523"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000523" class="method-signature">
+
+          <span class="method-name">replace</span><span class="method-args">(id, *options_for_render)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Replaces the &#8220;outer HTML&#8221; (i.e., the entire element, not just
+its contents) of the DOM element with the given <tt>id</tt>.
+</p>
+<p>
+<tt>options_for_render</tt> may be either a string of HTML to insert, or a
+hash of options to be passed to ActionView::Base#render. For example:
+</p>
+<pre>
+  # Replace the DOM element having ID 'person-45' with the
+  # 'person' partial for the appropriate object.
+  page.replace 'person-45', :partial =&gt; 'person', :object =&gt; @person
+</pre>
+<p>
+This allows the same partial that is used for the <tt><a
+href="GeneratorMethods.html#M000521">insert_html</a></tt> to be also used
+for the input to <tt>replace</tt> without resorting to the use of wrapper
+elements.
+</p>
+<p>
+Examples:
+</p>
+<pre>
+  &lt;div id=&quot;people&quot;&gt;
+    &lt;%= render :partial =&gt; 'person', :collection =&gt; @people %&gt;
+  &lt;/div&gt;
+
+  # Insert a new person
+  #
+  # Generates: new Insertion.Bottom({object: &quot;Matz&quot;, partial: &quot;person&quot;}, &quot;&quot;);
+  page.insert_html :bottom, :partial =&gt; 'person', :object =&gt; @person
+
+  # Replace an existing person
+
+  # Generates: Element.replace(&quot;person_45&quot;, &quot;-- Contents of partial --&quot;);
+  page.replace 'person_45', :partial =&gt; 'person', :object =&gt; @person
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000523-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000523-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 367</span>
+367:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">replace</span>(<span class="ruby-identifier">id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">options_for_render</span>)
+368:             <span class="ruby-identifier">call</span> <span class="ruby-value str">'Element.replace'</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">render</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">options_for_render</span>)
+369:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000522" class="method-detail">
+        <a name="M000522"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000522" class="method-signature">
+
+          <span class="method-name">replace_html</span><span class="method-args">(id, *options_for_render)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Replaces the inner HTML of the DOM element with the given <tt>id</tt>.
+</p>
+<p>
+<tt>options_for_render</tt> may be either a string of HTML to insert, or a
+hash of options to be passed to ActionView::Base#render. For example:
+</p>
+<pre>
+  # Replace the HTML of the DOM element having ID 'person-45' with the
+  # 'person' partial for the appropriate object.
+  # Generates:  Element.update(&quot;person-45&quot;, &quot;-- Contents of 'person' partial --&quot;);
+  page.replace_html 'person-45', :partial =&gt; 'person', :object =&gt; @person
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000522-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000522-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 333</span>
+333:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">replace_html</span>(<span class="ruby-identifier">id</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">options_for_render</span>)
+334:             <span class="ruby-identifier">call</span> <span class="ruby-value str">'Element.update'</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">render</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">options_for_render</span>)
+335:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000520" class="method-detail">
+        <a name="M000520"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000520" class="method-signature">
+
+          <span class="method-name">select</span><span class="method-args">(pattern)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Returns a collection reference by finding it through a CSS <tt>pattern</tt>
+in the DOM. This collection can then be used for further method calls.
+Examples:
+</p>
+<pre>
+  page.select('p')                      # =&gt; $$('p');
+  page.select('p.welcome b').first      # =&gt; $$('p.welcome b').first();
+  page.select('p.welcome b').first.hide # =&gt; $$('p.welcome b').first().hide();
+</pre>
+<p>
+You can also use prototype enumerations with the collection. Observe:
+</p>
+<pre>
+  # Generates: $$('#items li').each(function(value) { value.hide(); });
+  page.select('#items li').each do |value|
+    value.hide
+  end
+</pre>
+<p>
+Though you can call the block param anything you want, they are always
+rendered in the javascript as &#8216;value, index.&#8217; Other
+enumerations, like collect() return the last statement:
+</p>
+<pre>
+  # Generates: var hidden = $$('#items li').collect(function(value, index) { return value.hide(); });
+  page.select('#items li').collect('hidden') do |item|
+    item.hide
+  end
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000520-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000520-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 290</span>
+290:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select</span>(<span class="ruby-identifier">pattern</span>)
+291:             <span class="ruby-constant">JavaScriptElementCollectionProxy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">pattern</span>)
+292:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000525" class="method-detail">
+        <a name="M000525"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000525" class="method-signature">
+
+          <span class="method-name">show</span><span class="method-args">(*ids)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Shows hidden DOM elements with the given <tt>ids</tt>.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ # Show a few people
+ # Generates: [&quot;person_6&quot;, &quot;person_13&quot;, &quot;person_223&quot;].each(Element.show);
+ page.show 'person_6', 'person_13', 'person_223'
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000525-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000525-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 391</span>
+391:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ids</span>)
+392:             <span class="ruby-identifier">loop_on_multiple_args</span> <span class="ruby-value str">'Element.show'</span>, <span class="ruby-identifier">ids</span>
+393:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000536" class="method-detail">
+        <a name="M000536"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000536" class="method-signature">
+
+          <span class="method-name">sortable</span><span class="method-args">(id, options = {})</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Creates a script.aculo.us sortable element. Useful to recreate sortable
+elements after items get added or deleted. See <a
+href="../../ScriptaculousHelper.html">ActionView::Helpers::ScriptaculousHelper</a>
+for more information.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000536-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000536-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/scriptaculous_helper.rb, line 243</span>
+243:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sortable</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span> = {})
+244:             <span class="ruby-identifier">record</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">:sortable_element_js</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span>)
+245:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000527" class="method-detail">
+        <a name="M000527"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000527" class="method-signature">
+
+          <span class="method-name">toggle</span><span class="method-args">(*ids)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Toggles the visibility of the DOM elements with the given <tt>ids</tt>.
+Example:
+</p>
+<pre>
+ # Show a few people
+ # Generates: [&quot;person_14&quot;, &quot;person_12&quot;, &quot;person_23&quot;].each(Element.toggle);
+ page.toggle 'person_14', 'person_12', 'person_23'      # Hides the elements
+ page.toggle 'person_14', 'person_12', 'person_23'      # Shows the previously hidden elements
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000527-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000527-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/prototype_helper.rb, line 415</span>
+415:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">toggle</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">ids</span>)
+416:             <span class="ruby-identifier">loop_on_multiple_args</span> <span class="ruby-value str">'Element.toggle'</span>, <span class="ruby-identifier">ids</span>
+417:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000535" class="method-detail">
+        <a name="M000535"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000535" class="method-signature">
+
+          <span class="method-name">visual_effect</span><span class="method-args">(name, id = nil, options = {})</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Starts a script.aculo.us visual effect. See <a
+href="../../ScriptaculousHelper.html">ActionView::Helpers::ScriptaculousHelper</a>
+for more information.
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000535-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000535-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_view/helpers/scriptaculous_helper.rb, line 235</span>
+235:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visual_effect</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span> = {})
+236:             <span class="ruby-identifier">record</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">:visual_effect</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span>)
+237:           <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

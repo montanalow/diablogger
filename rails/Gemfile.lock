@@ -1,0 +1,326 @@
+--- 
+hash: 2b589542086b18d59f672c5648eaf5b13a6537b5
+sources: 
+- Git: 
+    git: git://github.com/datamapper/dm-do-adapter.git
+    uri: git://github.com/datamapper/dm-do-adapter.git
+    ref: 7222db6697c7ca27bb8acad03f27cf2d2106fe92
+- Git: 
+    git: git://github.com/datamapper/dm-core.git
+    uri: git://github.com/datamapper/dm-core.git
+    ref: dc55dc0a4f7c17680947c7516ee745507ba706f3
+- Git: 
+    git: git://github.com/rspec/rspec-mocks.git
+    require: rspec/mocks
+    name: rspec-mocks
+    version: 2.0.0.beta.7
+    uri: git://github.com/rspec/rspec-mocks.git
+    ref: 89b474e52519f38af187eba7f454dba2c98183e2
+- Git: 
+    git: git://github.com/rspec/rspec-expectations.git
+    require: rspec/expectations
+    name: rspec-expectations
+    version: 2.0.0.beta.7
+    uri: git://github.com/rspec/rspec-expectations.git
+    ref: e3c7069e63800bb5b79f2ad8ce9640659813e2d6
+- Git: 
+    git: git://github.com/rspec/rspec-core.git
+    require: rspec/core
+    name: rspec-core
+    version: 2.0.0.beta.7
+    uri: git://github.com/rspec/rspec-core.git
+    ref: 38da099438fa9c80ecfd7320df756366d7921010
+- Git: 
+    git: git://github.com/rspec/rspec.git
+    name: rspec
+    version: 2.0.0.beta.7
+    uri: git://github.com/rspec/rspec.git
+    ref: 6c343be1cdcf0b381855e3f7f12ddd0aa9e1e080
+- Git: 
+    git: git://github.com/snusnu/dm-accepts_nested_attributes.git
+    uri: git://github.com/snusnu/dm-accepts_nested_attributes.git
+    ref: 3916dbf213dfff0371b4d023eb876f4adfd2d91c
+- Git: 
+    git: git://github.com/datamapper/dm-serializer.git
+    uri: git://github.com/datamapper/dm-serializer.git
+    ref: 61ef397292d7c1a95753a37c89a794ccd0e278e7
+- Git: 
+    git: git://github.com/datamapper/dm-observer.git
+    uri: git://github.com/datamapper/dm-observer.git
+    ref: eefea1395c590a26d06f282c333c7e33efce2c13
+- Git: 
+    git: git://github.com/datamapper/dm-timestamps.git
+    uri: git://github.com/datamapper/dm-timestamps.git
+    ref: 4b0837768652502a8d1f8aedbca38ec0c52d7141
+- Git: 
+    git: git://github.com/datamapper/dm-aggregates.git
+    uri: git://github.com/datamapper/dm-aggregates.git
+    ref: 322507c5d663dc79fbebac95b0dcb65fcb216373
+- Git: 
+    git: git://github.com/datamapper/dm-transactions.git
+    uri: git://github.com/datamapper/dm-transactions.git
+    ref: 7e77fc48f3532f402894945d3cd0f0c29a4f6bb7
+- Git: 
+    git: git://github.com/datamapper/dm-constraints.git
+    uri: git://github.com/datamapper/dm-constraints.git
+    ref: 4286354d32a7e87678d218297b2fb140f5c22389
+- Git: 
+    git: git://github.com/datamapper/dm-validations.git
+    uri: git://github.com/datamapper/dm-validations.git
+    ref: d2a26fb6f7448cd06fb110147cfa9693f3ecb83f
+- Git: 
+    git: git://github.com/datamapper/dm-types.git
+    uri: git://github.com/datamapper/dm-types.git
+    ref: b0031cc5198d3feb6a9780d7cb6e60fa5a4099f7
+- Git: 
+    git: git://github.com/datamapper/dm-migrations.git
+    uri: git://github.com/datamapper/dm-migrations.git
+    ref: 0a0934bd7d8b526cd62ea411a243f5165a8ca672
+- Git: 
+    git: git://github.com/datamapper/dm-sqlite-adapter.git
+    uri: git://github.com/datamapper/dm-sqlite-adapter.git
+    ref: c6fbd701a6a45a0b33a90e823628c96a3060619c
+- Git: 
+    git: git://github.com/datamapper/dm-rails.git
+    uri: git://github.com/datamapper/dm-rails.git
+    ref: 6f31a5b698ca3c7ef8bacd32f249650a90d50468
+- Rubygems: 
+    uri: http://rubygems.org
+- Git: 
+    uri: git://github.com/rails/rails.git
+    ref: 8c7e8976e97d96f514e22b04fc1afb9453134076
+specs: 
+- rake: 
+    version: 0.8.7
+- abstract: 
+    version: 1.0.0
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.3.7
+- memcache-client: 
+    version: 1.8.2
+- tzinfo: 
+    version: 0.3.19
+- activesupport: 
+    version: 3.0.0.beta3
+    source: 19
+- activemodel: 
+    version: 3.0.0.beta3
+    source: 19
+- erubis: 
+    version: 2.6.5
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.3
+- rack-test: 
+    version: 0.5.3
+- actionpack: 
+    version: 3.0.0.beta3
+    source: 19
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.5
+- mail: 
+    version: 2.2.0
+- text-hyphen: 
+    version: 1.0.0
+- text-format: 
+    version: 1.0.0
+- actionmailer: 
+    version: 3.0.0.beta3
+    source: 19
+- addressable: 
+    version: 2.1.1
+- data_objects: 
+    version: 0.10.1
+- extlib: 
+    version: 0.9.14
+- dm-core: 
+    version: 0.10.3
+    source: 1
+- dm-accepts_nested_attributes: 
+    version: 0.12.0
+    source: 6
+- dm-active_model: 
+    version: 0.4.0
+- dm-aggregates: 
+    version: 0.10.3
+    source: 10
+- dm-constraints: 
+    version: 0.10.3
+    source: 12
+- dm-do-adapter: 
+    version: 0.10.3
+    source: 0
+- dm-migrations: 
+    version: 0.10.3
+    source: 15
+- dm-observer: 
+    version: 0.10.3
+    source: 8
+- thor: 
+    version: 0.13.4
+- railties: 
+    version: 3.0.0.beta3
+    source: 19
+- dm-rails: 
+    version: 0.10.2
+    source: 17
+- fastercsv: 
+    version: 1.5.3
+- json_pure: 
+    version: 1.2.4
+- dm-serializer: 
+    version: 0.10.3
+    source: 7
+- do_sqlite3: 
+    version: 0.10.1.1
+- dm-sqlite-adapter: 
+    version: 0.10.3
+    source: 16
+- dm-timestamps: 
+    version: 0.10.3
+    source: 9
+- dm-transactions: 
+    version: 0.10.3
+    source: 11
+- stringex: 
+    version: 1.1.0
+- uuidtools: 
+    version: 2.1.1
+- dm-types: 
+    version: 0.10.3
+    source: 14
+- dm-validations: 
+    version: 0.10.3
+    source: 13
+- nokogiri: 
+    version: 1.4.1
+- rspec-core: 
+    version: 2.0.0.beta.7
+    source: 4
+- rspec-expectations: 
+    version: 2.0.0.beta.7
+    source: 3
+- rspec-mocks: 
+    version: 2.0.0.beta.7
+    source: 2
+- rspec: 
+    version: 2.0.0.beta.7
+    source: 5
+- webrat: 
+    version: 0.7.0
+- rspec-rails: 
+    version: 2.0.0.beta.7
+dependencies: 
+  activesupport: 
+    version: ~> 3.0.0.beta3
+    group: 
+    - :default
+    require: 
+    - active_support
+  actionpack: 
+    version: ~> 3.0.0.beta3
+    group: 
+    - :default
+    require: 
+    - action_pack
+  actionmailer: 
+    version: ~> 3.0.0.beta3
+    group: 
+    - :default
+    require: 
+    - action_mailer
+  railties: 
+    version: ~> 3.0.0.beta3
+    group: 
+    - :default
+    require: 
+    - rails
+  dm-rails: 
+    version: ~> 0.10.2
+    group: 
+    - :default
+  dm-sqlite-adapter: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-migrations: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-types: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-validations: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-constraints: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-transactions: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-aggregates: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-timestamps: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-observer: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-serializer: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-accepts_nested_attributes: 
+    version: ~> 0.12.0
+    group: 
+    - :default
+  rspec: 
+    version: = 2.0.0.beta.7
+    group: 
+    - :test
+  rspec-core: 
+    version: = 2.0.0.beta.7
+    group: 
+    - :test
+    require: 
+    - rspec/core
+  rspec-expectations: 
+    version: = 2.0.0.beta.7
+    group: 
+    - :test
+    require: 
+    - rspec/expectations
+  rspec-mocks: 
+    version: = 2.0.0.beta.7
+    group: 
+    - :test
+    require: 
+    - rspec/mocks
+  rspec-rails: 
+    version: = 2.0.0.beta.7
+    group: 
+    - :test
+  dm-core: 
+    version: ~> 0.10.3
+    group: 
+    - :default
+  dm-do-adapter: 
+    version: ~> 0.10.3
+    group: 
+    - :default

@@ -1,0 +1,255 @@
+--- 
+hash: 7a4a8cee9b9b6cb0d86411d81fb5a25506d112dc
+sources: 
+- Git: 
+    git: git://github.com/rspec/rspec-mocks.git
+    require: rspec/mocks
+    name: rspec-mocks
+    version: 2.0.0.beta.8
+    uri: git://github.com/rspec/rspec-mocks.git
+    ref: c74e5e63a056b501261f2d687b9831374f9e003a
+- Git: 
+    git: git://github.com/rspec/rspec-expectations.git
+    require: rspec/expectations
+    name: rspec-expectations
+    version: 2.0.0.beta.8
+    uri: git://github.com/rspec/rspec-expectations.git
+    ref: 6a6d4c8f2f8257f3a77613c18003a2ff23269e1d
+- Git: 
+    git: git://github.com/rspec/rspec-core.git
+    require: rspec/core
+    name: rspec-core
+    version: 2.0.0.beta.8
+    uri: git://github.com/rspec/rspec-core.git
+    ref: 8c1fc7615776ab87e2b7e29ec2f4b92ef9d166c9
+- Git: 
+    git: git://github.com/rspec/rspec.git
+    name: rspec
+    version: 2.0.0.beta.8
+    uri: git://github.com/rspec/rspec.git
+    ref: a0204173e54ff8ec21e2e4052b27ac5933f25196
+- Git: 
+    git: git://github.com/rails/rails.git
+    uri: git://github.com/rails/rails.git
+    ref: c0db7840fe6dfd9aef8120b24e05f7e6f400d382
+- Git: 
+    git: git://github.com/datamapper/dm-do-adapter.git
+    uri: git://github.com/datamapper/dm-do-adapter.git
+    ref: c18c85bffc593af91626cf69094aac3d329fb903
+- Git: 
+    git: git://github.com/datamapper/dm-core.git
+    uri: git://github.com/datamapper/dm-core.git
+    ref: 48b13b8a6d0c7960b06848db71bd393b8e64c16b
+- Git: 
+    git: git://github.com/datamapper/dm-serializer.git
+    uri: git://github.com/datamapper/dm-serializer.git
+    ref: ea7ede32f24b1d20da4136a230d8b0c8dc98805c
+- Git: 
+    git: git://github.com/datamapper/dm-observer.git
+    uri: git://github.com/datamapper/dm-observer.git
+    ref: b2180cdd62abe3e6593b41caa90ae93962374727
+- Git: 
+    git: git://github.com/datamapper/dm-timestamps.git
+    uri: git://github.com/datamapper/dm-timestamps.git
+    ref: f5033d0e6e9446c3c41d1431c4381ad3142cce8b
+- Git: 
+    git: git://github.com/datamapper/dm-aggregates.git
+    uri: git://github.com/datamapper/dm-aggregates.git
+    ref: 08073d80081444c97f0afd0375d7971fc6ddfbe7
+- Git: 
+    git: git://github.com/datamapper/dm-transactions.git
+    uri: git://github.com/datamapper/dm-transactions.git
+    ref: c76dcf2ea90bf3ebad1c20ecb53428a80b9a6a47
+- Git: 
+    git: git://github.com/datamapper/dm-constraints.git
+    uri: git://github.com/datamapper/dm-constraints.git
+    ref: 398e25730efcfa6ec5b3206989c7a8d5c5354c66
+- Git: 
+    git: git://github.com/datamapper/dm-validations.git
+    uri: git://github.com/datamapper/dm-validations.git
+    ref: 43a9aebcffe64a6c1b3620c370c0e2e7cf95eda9
+- Git: 
+    git: git://github.com/datamapper/dm-types.git
+    uri: git://github.com/datamapper/dm-types.git
+    ref: 0cfcca4bbf2c16de54cce4e8c67b1c13d8bb4412
+- Git: 
+    git: git://github.com/datamapper/dm-migrations.git
+    uri: git://github.com/datamapper/dm-migrations.git
+    ref: 38619176a6e6b7a2c1c9afd461256e7971b33a35
+- Git: 
+    git: git://github.com/datamapper/dm-sqlite-adapter.git
+    uri: git://github.com/datamapper/dm-sqlite-adapter.git
+    ref: e7e563c57f89673dc16d7d7aeab912cf460fff99
+- Rubygems: 
+    uri: http://rubygems.org
+specs: 
+- rake: 
+    version: 0.8.7
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.4.0.beta1
+- memcache-client: 
+    version: 1.8.3
+- tzinfo: 
+    version: 0.3.20
+- activesupport: 
+    version: 3.0.0.beta3
+    source: 4
+- addressable: 
+    version: 2.1.2
+- data_objects: 
+    version: 0.10.2
+- diff-lcs: 
+    version: 1.1.2
+- extlib: 
+    version: 0.9.15
+- dm-core: 
+    version: 1.0.0.rc2
+    source: 6
+- dm-aggregates: 
+    version: 1.0.0.rc2
+    source: 10
+- dm-migrations: 
+    version: 1.0.0.rc2
+    source: 15
+- dm-constraints: 
+    version: 1.0.0.rc2
+    source: 12
+- dm-do-adapter: 
+    version: 1.0.0.rc2
+    source: 5
+- dm-observer: 
+    version: 1.0.0.rc2
+    source: 8
+- fastercsv: 
+    version: 1.5.3
+- json_pure: 
+    version: 1.4.3
+- dm-serializer: 
+    version: 1.0.0.rc2
+    source: 7
+- do_sqlite3: 
+    version: 0.10.2
+- dm-sqlite-adapter: 
+    version: 1.0.0.rc2
+    source: 16
+- dm-timestamps: 
+    version: 1.0.0.rc2
+    source: 9
+- dm-transactions: 
+    version: 1.0.0.rc2
+    source: 11
+- stringex: 
+    version: 1.1.0
+- uuidtools: 
+    version: 2.1.1
+- dm-types: 
+    version: 1.0.0.rc2
+    source: 14
+- dm-validations: 
+    version: 1.0.0.rc2
+    source: 13
+- rubyforge: 
+    version: 2.0.4
+- hoe: 
+    version: 2.6.0
+- erector: 
+    version: 0.7.2
+- rack: 
+    version: 1.1.0
+- rspec-core: 
+    version: 2.0.0.beta.8
+    source: 2
+- rspec-expectations: 
+    version: 2.0.0.beta.8
+    source: 1
+- rspec-mocks: 
+    version: 2.0.0.beta.8
+    source: 0
+- rspec: 
+    version: 2.0.0.beta.8
+    source: 3
+dependencies: 
+  rack: 
+    version: ~> 1.1.0
+    group: 
+    - :default
+  dm-sqlite-adapter: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-migrations: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-types: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-validations: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-constraints: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-transactions: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-aggregates: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-timestamps: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-observer: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-serializer: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-core: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  dm-do-adapter: 
+    version: ~> 1.0.0.rc2
+    group: 
+    - :default
+  erector: 
+    version: ">= 0"
+    group: 
+    - :default
+  activesupport: 
+    version: ~> 3.0.0.beta3
+    group: 
+    - :default
+  rspec: 
+    version: = 2.0.0.beta.8
+    group: 
+    - :test
+  rspec-core: 
+    version: = 2.0.0.beta.8
+    group: 
+    - :test
+    require: 
+    - rspec/core
+  rspec-expectations: 
+    version: = 2.0.0.beta.8
+    group: 
+    - :test
+    require: 
+    - rspec/expectations
+  rspec-mocks: 
+    version: = 2.0.0.beta.8
+    group: 
+    - :test
+    require: 
+    - rspec/mocks

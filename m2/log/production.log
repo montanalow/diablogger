@@ -1,0 +1,30 @@
+# Logfile created on 2010-05-12 22:06:54 -0700 by logger.rb/20321
+I, [2010-05-19T22:30:34.248078 #4324]  INFO -- : unlinking existing socket=/tmp/.sock
+I, [2010-05-19T22:30:34.249193 #4324]  INFO -- : listening on addr=/tmp/.sock fd=4
+I, [2010-05-19T22:30:34.323227 #4324]  INFO -- : Refreshing Gem list
+I, [2010-05-19T22:30:35.722320 #4326]  INFO -- : worker=0 ready
+I, [2010-05-19T22:30:35.723634 #4327]  INFO -- : worker=1 ready
+I, [2010-05-19T22:30:35.726837 #4328]  INFO -- : worker=2 ready
+I, [2010-05-19T22:30:35.727927 #4329]  INFO -- : worker=3 ready
+I, [2010-05-19T22:30:35.728178 #4324]  INFO -- : master process ready
+E, [2010-05-19T22:30:44.784691 #4329] ERROR -- : Read error: #<NoMethodError: undefined method `first' for nil:NilClass>
+E, [2010-05-19T22:30:44.784788 #4329] ERROR -- : /usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:636:in `process_client'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:707:in `block in worker_loop'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:705:in `each'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:705:in `worker_loop'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:596:in `block (2 levels) in spawn_missing_workers'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:593:in `fork'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:593:in `block in spawn_missing_workers'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:589:in `each'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:589:in `spawn_missing_workers'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:603:in `maintain_worker_count'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:270:in `start'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/lib/unicorn.rb:29:in `run'
+/usr/local/lib/ruby/gems/1.9.1/gems/unicorn-0.97.0/bin/unicorn:127:in `<top (required)>'
+/usr/local/bin/unicorn:19:in `load'
+/usr/local/bin/unicorn:19:in `<main>'
+I, [2010-05-19T22:30:52.114357 #4324]  INFO -- : reaped #<Process::Status: pid 4329 exit 0> worker=3
+I, [2010-05-19T22:30:52.114526 #4324]  INFO -- : reaped #<Process::Status: pid 4328 exit 0> worker=2
+I, [2010-05-19T22:30:52.114632 #4324]  INFO -- : reaped #<Process::Status: pid 4327 exit 0> worker=1
+I, [2010-05-19T22:30:52.114719 #4324]  INFO -- : reaped #<Process::Status: pid 4326 exit 0> worker=0
+I, [2010-05-19T22:30:52.114838 #4324]  INFO -- : master complete

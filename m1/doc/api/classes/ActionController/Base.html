@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: ActionController::Base [Rails Framework Documentation]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }<\/style>" )
+
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">ActionController::Base</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/base_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/base.rb
+
+                </a>
+
+
+        <br />
+
+
+                <a href="../../files/Users/montana/_bundle/ruby/1_9_1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base_rb.html">
+
+                /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb
+
+                </a>
+
+
+        <br />
+
+            </td>
+        </tr>
+
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+
+                <a href="Metal.html">
+
+                ActionController::Metal
+
+               </a>
+
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+  <div id="contextContent">
+
+   </div>
+
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+
+        <a href="#M000297">allow_concurrency</a>&nbsp;&nbsp;
+
+        <a href="#M000298">allow_concurrency=</a>&nbsp;&nbsp;
+
+        <a href="#M000295">consider_all_requests_local</a>&nbsp;&nbsp;
+
+        <a href="#M000296">consider_all_requests_local=</a>&nbsp;&nbsp;
+
+        <a href="#M000302">cookie_verifier_secret</a>&nbsp;&nbsp;
+
+        <a href="#M000301">cookie_verifier_secret=</a>&nbsp;&nbsp;
+
+        <a href="#M000292">deprecated_config_accessor</a>&nbsp;&nbsp;
+
+        <a href="#M000293">deprecated_config_reader</a>&nbsp;&nbsp;
+
+        <a href="#M000294">deprecated_config_writer</a>&nbsp;&nbsp;
+
+        <a href="#M000290">inherited</a>&nbsp;&nbsp;
+
+        <a href="#M000300">ip_spoofing_check</a>&nbsp;&nbsp;
+
+        <a href="#M000299">ip_spoofing_check=</a>&nbsp;&nbsp;
+
+        <a href="#M000307">resource_action_separator</a>&nbsp;&nbsp;
+
+        <a href="#M000308">resource_action_separator=</a>&nbsp;&nbsp;
+
+        <a href="#M000305">session</a>&nbsp;&nbsp;
+
+        <a href="#M000306">session=</a>&nbsp;&nbsp;
+
+        <a href="#M000291">subclasses</a>&nbsp;&nbsp;
+
+        <a href="#M000304">trusted_proxies</a>&nbsp;&nbsp;
+
+        <a href="#M000303">trusted_proxies=</a>&nbsp;&nbsp;
+
+        <a href="#M000309">use_accept_header</a>&nbsp;&nbsp;
+
+        <a href="#M000310">use_accept_header=</a>&nbsp;&nbsp;
+
+        <a href="#M000289">without_modules</a>&nbsp;&nbsp;
+
+      </div>
+    </div>
+
+  </div>
+
+    <!-- if includes -->
+
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+
+        <span class="include-name"><a href="Compatibility.html">ActionController::Compatibility</a></span>
+
+      </div>
+    </div>
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="Base/DeprecatedBehavior.html" class="link">ActionController::Base::DeprecatedBehavior</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">MODULES</td>
+          <td>=</td>
+          <td class="context-item-value">[       AbstractController::Layouts,       AbstractController::Translation,        Helpers,       HideActions,       UrlFor,       Redirecting,       Rendering,       Renderers::All,       ConditionalGet,       RackDelegation,       SessionManagement,       Caching,       MimeResponds,       PolymorphicRoutes,       ImplicitRender,        Cookies,       Flash,       RequestForgeryProtection,       Streaming,       RecordIdentifier,       HttpAuthentication::Basic::ControllerMethods,       HttpAuthentication::Digest::ControllerMethods,        # Add instrumentations hooks at the bottom, to ensure they instrument       # all the methods properly.       Instrumentation,        # Before callbacks should also be executed the earliest as possible, so       # also include them at the bottom.       AbstractController::Callbacks,        # The same with rescue, append it at the end to wrap as much as possible.       Rescue     ]</td>
+
+        </tr>
+
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <!-- if method_list -->
+
+    <div id="methods">
+
+      <h3 class="section-bar">Public Class methods</h3>
+
+
+      <div id="method-M000297" class="method-detail">
+        <a name="M000297"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000297" class="method-signature">
+
+          <span class="method-name">allow_concurrency</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000297-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000297-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 47</span>
+47:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allow_concurrency</span>
+48:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.allow_concurrency is deprecated, &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+49:           <span class="ruby-value str">&quot;use Rails.application.config.allow_concurrency instead&quot;</span>, <span class="ruby-identifier">caller</span>
+50:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">allow_concurrency</span>
+51:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000298" class="method-detail">
+        <a name="M000298"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000298" class="method-signature">
+
+          <span class="method-name">allow_concurrency=</span><span class="method-args">(value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000298-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000298-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 53</span>
+53:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">allow_concurrency=</span>(<span class="ruby-identifier">value</span>)
+54:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.allow_concurrency= is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+55:           <span class="ruby-value str">&quot;Please configure it on your application with config.allow_concurrency=&quot;</span>, <span class="ruby-identifier">caller</span>
+56:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">allow_concurrency</span> = <span class="ruby-identifier">value</span>
+57:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000295" class="method-detail">
+        <a name="M000295"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000295" class="method-signature">
+
+          <span class="method-name">consider_all_requests_local</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000295-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000295-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 35</span>
+35:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">consider_all_requests_local</span>
+36:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.consider_all_requests_local is deprecated, &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+37:           <span class="ruby-value str">&quot;use Rails.application.config.consider_all_requests_local instead&quot;</span>, <span class="ruby-identifier">caller</span>
+38:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">consider_all_requests_local</span>
+39:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000296" class="method-detail">
+        <a name="M000296"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000296" class="method-signature">
+
+          <span class="method-name">consider_all_requests_local=</span><span class="method-args">(value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000296-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000296-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 41</span>
+41:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">consider_all_requests_local=</span>(<span class="ruby-identifier">value</span>)
+42:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.consider_all_requests_local= is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+43:           <span class="ruby-value str">&quot;Please configure it on your application with config.consider_all_requests_local=&quot;</span>, <span class="ruby-identifier">caller</span>
+44:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">consider_all_requests_local</span> = <span class="ruby-identifier">value</span>
+45:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000302" class="method-detail">
+        <a name="M000302"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000302" class="method-signature">
+
+          <span class="method-name">cookie_verifier_secret</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000302-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000302-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 76</span>
+76:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cookie_verifier_secret</span>
+77:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.cookie_verifier_secret is deprecated.&quot;</span>, <span class="ruby-identifier">caller</span>
+78:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000301" class="method-detail">
+        <a name="M000301"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000301" class="method-signature">
+
+          <span class="method-name">cookie_verifier_secret=</span><span class="method-args">(value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000301-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000301-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 71</span>
+71:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cookie_verifier_secret=</span>(<span class="ruby-identifier">value</span>)
+72:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.cookie_verifier_secret= is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+73:           <span class="ruby-value str">&quot;Please configure it on your application with config.secret_token=&quot;</span>, <span class="ruby-identifier">caller</span>
+74:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000292" class="method-detail">
+        <a name="M000292"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000292" class="method-signature">
+
+          <span class="method-name">deprecated_config_accessor</span><span class="method-args">(option, message = nil)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000292-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000292-source">
+<pre>
+   <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 4</span>
+4:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deprecated_config_accessor</span>(<span class="ruby-identifier">option</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword kw">nil</span>)
+5:         <span class="ruby-identifier">deprecated_config_reader</span>(<span class="ruby-identifier">option</span>, <span class="ruby-identifier">message</span>)
+6:         <span class="ruby-identifier">deprecated_config_writer</span>(<span class="ruby-identifier">option</span>, <span class="ruby-identifier">message</span>)
+7:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000293" class="method-detail">
+        <a name="M000293"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000293" class="method-signature">
+
+          <span class="method-name">deprecated_config_reader</span><span class="method-args">(option, message = nil)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000293-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000293-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 9</span>
+ 9:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deprecated_config_reader</span>(<span class="ruby-identifier">option</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword kw">nil</span>)
+10:         <span class="ruby-identifier">message</span> <span class="ruby-operator">||=</span> <span class="ruby-node">&quot;Reading #{option} directly from ActionController::Base is deprecated. &quot;</span> \
+11:                     <span class="ruby-node">&quot;Please read it from config.#{option}&quot;</span>
+12: 
+13:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">&quot;def \#{option}\nActiveSupport::Deprecation.warn \#{message.inspect}, caller\nconfig.\#{option}\nend\n&quot;</span>, <span class="ruby-keyword kw">__FILE__</span>, <span class="ruby-keyword kw">__LINE__</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+14:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000294" class="method-detail">
+        <a name="M000294"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000294" class="method-signature">
+
+          <span class="method-name">deprecated_config_writer</span><span class="method-args">(option, message = nil)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000294-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000294-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 22</span>
+22:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deprecated_config_writer</span>(<span class="ruby-identifier">option</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword kw">nil</span>)
+23:         <span class="ruby-identifier">message</span> <span class="ruby-operator">||=</span> <span class="ruby-node">&quot;Setting #{option} directly on ActionController::Base is deprecated. &quot;</span> \
+24:                     <span class="ruby-node">&quot;Please set it on config.action_controller.#{option}&quot;</span>
+25: 
+26:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">&quot;def \#{option}=(val)\nActiveSupport::Deprecation.warn \#{message.inspect}, caller\nconfig.\#{option} = val\nend\n&quot;</span>, <span class="ruby-keyword kw">__FILE__</span>, <span class="ruby-keyword kw">__LINE__</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+27:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000290" class="method-detail">
+        <a name="M000290"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000290" class="method-signature">
+
+          <span class="method-name">inherited</span><span class="method-args">(klass)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000290-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000290-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/base.rb, line 58</span>
+58:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">inherited</span>(<span class="ruby-identifier">klass</span>)
+59:       <span class="ruby-operator">::</span><span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">subclasses</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">to_s</span>
+60:       <span class="ruby-keyword kw">super</span>
+61:       <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">helper</span> <span class="ruby-identifier">:all</span>
+62:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000300" class="method-detail">
+        <a name="M000300"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000300" class="method-signature">
+
+          <span class="method-name">ip_spoofing_check</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000300-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000300-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 65</span>
+65:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ip_spoofing_check</span>
+66:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.ip_spoofing_check is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+67:           <span class="ruby-value str">&quot;Configuring ip_spoofing_check on the application configures a middleware.&quot;</span>, <span class="ruby-identifier">caller</span>
+68:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">action_dispatch</span>.<span class="ruby-identifier">ip_spoofing_check</span>
+69:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000299" class="method-detail">
+        <a name="M000299"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000299" class="method-signature">
+
+          <span class="method-name">ip_spoofing_check=</span><span class="method-args">(value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000299-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000299-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 59</span>
+59:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ip_spoofing_check=</span>(<span class="ruby-identifier">value</span>)
+60:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.ip_spoofing_check= is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+61:           <span class="ruby-value str">&quot;Please configure it on your application with config.action_dispatch.ip_spoofing_check=&quot;</span>, <span class="ruby-identifier">caller</span>
+62:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">action_dispatch</span>.<span class="ruby-identifier">ip_spoofing_check</span> = <span class="ruby-identifier">value</span>
+63:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000307" class="method-detail">
+        <a name="M000307"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000307" class="method-signature">
+
+          <span class="method-name">resource_action_separator</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Controls the resource action separator
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000307-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000307-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 112</span>
+112:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resource_action_separator</span>
+113:         <span class="ruby-ivar">@resource_action_separator</span> <span class="ruby-operator">||=</span> <span class="ruby-value str">&quot;/&quot;</span>
+114:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000308" class="method-detail">
+        <a name="M000308"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000308" class="method-signature">
+
+          <span class="method-name">resource_action_separator=</span><span class="method-args">(val)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000308-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000308-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 116</span>
+116:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resource_action_separator=</span>(<span class="ruby-identifier">val</span>)
+117:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.resource_action_separator is deprecated and only &quot;</span> \
+118:                                         <span class="ruby-value str">&quot;works with the deprecated router DSL.&quot;</span>
+119:         <span class="ruby-ivar">@resource_action_separator</span> = <span class="ruby-identifier">val</span>
+120:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000305" class="method-detail">
+        <a name="M000305"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000305" class="method-signature">
+
+          <span class="method-name">session</span><span class="method-args">(*args)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000305-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000305-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 92</span>
+92:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">session</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+93:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span>(
+94:           <span class="ruby-value str">&quot;Disabling sessions for a single controller has been deprecated. &quot;</span> <span class="ruby-operator">+</span>
+95:           <span class="ruby-value str">&quot;Sessions are now lazy loaded. So if you don't access them, &quot;</span> <span class="ruby-operator">+</span>
+96:           <span class="ruby-value str">&quot;consider them off. You can still modify the session cookie &quot;</span> <span class="ruby-operator">+</span>
+97:           <span class="ruby-value str">&quot;options with request.session_options.&quot;</span>, <span class="ruby-identifier">caller</span>)
+98:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000306" class="method-detail">
+        <a name="M000306"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000306" class="method-signature">
+
+          <span class="method-name">session=</span><span class="method-args">(value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000306-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000306-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 100</span>
+100:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">session=</span>(<span class="ruby-identifier">value</span>)
+101:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.session= is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+102:           <span class="ruby-value str">&quot;Please configure it on your application with config.session_store :cookie_store, :key =&gt; '....'&quot;</span>, <span class="ruby-identifier">caller</span>
+103:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:disabled</span>)
+104:           <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">session_store</span> <span class="ruby-identifier">:disabled</span>
+105:         <span class="ruby-keyword kw">else</span>
+106:           <span class="ruby-identifier">store</span> = <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">session_store</span>
+107:           <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">session_store</span> <span class="ruby-identifier">store</span>, <span class="ruby-identifier">value</span>
+108:         <span class="ruby-keyword kw">end</span>
+109:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000291" class="method-detail">
+        <a name="M000291"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000291" class="method-signature">
+
+          <span class="method-name">subclasses</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000291-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000291-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/base.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subclasses</span>
+65:       <span class="ruby-ivar">@subclasses</span> <span class="ruby-operator">||=</span> []
+66:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000304" class="method-detail">
+        <a name="M000304"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000304" class="method-signature">
+
+          <span class="method-name">trusted_proxies</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000304-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000304-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 86</span>
+86:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">trusted_proxies</span>
+87:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.trusted_proxies is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+88:           <span class="ruby-value str">&quot;Configuring trusted_proxies on the application configures a middleware.&quot;</span>, <span class="ruby-identifier">caller</span>
+89:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">action_dispatch</span>.<span class="ruby-identifier">ip_spoofing_check</span> = <span class="ruby-identifier">value</span>
+90:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000303" class="method-detail">
+        <a name="M000303"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000303" class="method-signature">
+
+          <span class="method-name">trusted_proxies=</span><span class="method-args">(value)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000303-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000303-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 80</span>
+80:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">trusted_proxies=</span>(<span class="ruby-identifier">value</span>)
+81:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.trusted_proxies= is deprecated. &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+82:           <span class="ruby-value str">&quot;Please configure it on your application with config.action_dispatch.trusted_proxies=&quot;</span>, <span class="ruby-identifier">caller</span>
+83:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">action_dispatch</span>.<span class="ruby-identifier">ip_spoofing_check</span> = <span class="ruby-identifier">value</span>
+84:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000309" class="method-detail">
+        <a name="M000309"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000309" class="method-signature">
+
+          <span class="method-name">use_accept_header</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000309-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000309-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 122</span>
+122:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use_accept_header</span>
+123:         <span class="ruby-constant">ActiveSupport</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecation</span>.<span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;ActionController::Base.use_accept_header doesn't do anything anymore. &quot;</span> \
+124:                                         <span class="ruby-value str">&quot;The accept header is always taken into account.&quot;</span>
+125:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000310" class="method-detail">
+        <a name="M000310"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000310" class="method-signature">
+
+          <span class="method-name">use_accept_header=</span><span class="method-args">(val)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000310-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000310-source">
+<pre>
+     <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/deprecated/base.rb, line 127</span>
+127:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use_accept_header=</span>(<span class="ruby-identifier">val</span>)
+128:         <span class="ruby-identifier">use_accept_header</span>
+129:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000289" class="method-detail">
+        <a name="M000289"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000289" class="method-signature">
+
+          <span class="method-name">without_modules</span><span class="method-args">(*modules)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000289-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000289-source">
+<pre>
+    <span class="ruby-comment cmt"># File /Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/actionpack/lib/action_controller/base.rb, line 5</span>
+ 5:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">without_modules</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">modules</span>)
+ 6:       <span class="ruby-identifier">modules</span> = <span class="ruby-identifier">modules</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+ 7:         <span class="ruby-identifier">m</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">ActionController</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">m</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">m</span>
+ 8:       <span class="ruby-keyword kw">end</span>
+ 9: 
+10:       <span class="ruby-constant">MODULES</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">modules</span>
+11:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

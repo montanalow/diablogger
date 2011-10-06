@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: hash_with_indifferent_access.rb [Rails Framework Documentation]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../../../../../../../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }<\/style>" )
+
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+  <div id="fileHeader">
+    <h1>hash_with_indifferent_access.rb</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>/Users/montana/.bundle/ruby/1.9.1/bundler/gems/rails-16a5e918a06649ffac24fd5873b875daf66212ad-8c7e8976e97d96f514e22b04fc1afb9453134076/activesupport/lib/active_support/hash_with_indifferent_access.rb
+
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>2010-04-17 21:26:29 -0700</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This class has dubious semantics and we only have it so that people can
+write params[:key] instead of params[&#8216;key&#8217;] and they get the
+same value for both keys.
+</p>
+<hr size="1"></hr><p>
+encoding: utf-8
+</p>
+<hr size="1"></hr><p>
+encoding: utf-8
+</p>
+<hr size="1"></hr><p>
+encoding: utf-8
+</p>
+<hr size="1"></hr><p>
+OrderedHash is namespaced to prevent conflicts with other implementations
+</p>
+<hr size="1"></hr><p>
+Some code from jeremymcanally&#8217;s &#8220;pending&#8221; <a
+href="http://github.com/jeremymcanally/pending/tree/master">github.com/jeremymcanally/pending/tree/master</a>
+</p>
+<hr size="1"></hr><p>
+The TimeZone class serves as a wrapper around TZInfo::Timezone instances.
+It allows us to do the following:
+</p>
+<ul>
+<li>Limit the set of zones provided by TZInfo to a meaningful subset of 142
+zones.
+
+</li>
+<li>Retrieve and display zones with a friendlier name (e.g., &#8220;Eastern <a
+href="../../../../../../../../../../../../classes/Time.html">Time</a> (US
+&amp; Canada)&#8221; instead of &#8220;America/New_York&#8220;).
+
+</li>
+<li>Lazily load TZInfo::Timezone instances only when they&#8217;re needed.
+
+</li>
+<li>Create <a
+href="../../../../../../../../../../../../classes/ActiveSupport/TimeWithZone.html">ActiveSupport::TimeWithZone</a>
+instances via TimeZone&#8217;s <tt>local</tt>, <tt>parse</tt>, <tt>at</tt>
+and <tt>now</tt> methods.
+
+</li>
+</ul>
+<p>
+If you set <tt>config.time_zone</tt> in the <a
+href="../../../../../../../../../../../../classes/Rails.html">Rails</a>
+Initializer, you can access this TimeZone object via <tt><a
+href="../../../../../../../../../../../../classes/Time.html#M000149">Time.zone</a></tt>:
+</p>
+<pre>
+  # environment.rb:
+  Rails::Initializer.run do |config|
+    config.time_zone = &quot;Eastern Time (US &amp; Canada)&quot;
+  end
+
+  Time.zone       # =&gt; #&lt;TimeZone:0x514834...&gt;
+  Time.zone.name  # =&gt; &quot;Eastern Time (US &amp; Canada)&quot;
+  Time.zone.now   # =&gt; Sun, 18 May 2008 14:30:44 EDT -04:00
+</pre>
+<p>
+The version of TZInfo bundled with Active Support only includes the
+definitions necessary to support the zones defined by the TimeZone class.
+If you need to use zones that aren&#8217;t defined by TimeZone,
+you&#8217;ll need to install the TZInfo gem (if a recent version of the gem
+is installed locally, this will be used instead of the bundled version.)
+</p>
+<hr size="1"></hr><h1>XmlMini JRuby JDOM implementation</h1>
+<hr size="1"></hr><h1>XmlMini LibXML implementation</h1>
+<hr size="1"></hr><h1>XmlMini LibXML implementation using a SAX-based parser</h1>
+<hr size="1"></hr><h1>XmlMini Nokogiri implementation</h1>
+<hr size="1"></hr><h1>XmlMini Nokogiri implementation using a SAX-based parser</h1>
+<hr size="1"></hr><h1>XmlMini ReXML implementation</h1>
+
+    </div>
+
+   </div>
+
+
+  </div>
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+    <!-- if method_list -->
+
+
+
+
+  </div>
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+#! /bin/bash
+if [ $1 ]; then
+  export "RACK_ENV="$1
+else
+  export "RACK_ENV=development"
+fi
+irb --prompt-mode simple -r ./app/app

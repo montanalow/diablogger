@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Description" content="Conversations for the record.  Free and simple diablog hosting." />
+    <title><%= "#{@title.blank? ? '': "#{@title} | "}Diablogger" -%></title>
+    <%= javascript_include_tag 'common', :cache => "common_cache" %>
+    <%= javascript_include_tag "views/#{params[:controller]}" %>
+    <%= stylesheet_link_tag 'common', :cache => "common_cache" %>
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+  <body id="body"></body>
+  <%= yield %>
+  <script type="text/javascript">
+    window.onload = function(){
+      document.getElementById('body').innerHTML = templates.layouts.public( templates.<%= params[:controller] %>.<%= params[:action] %>() );
+    };
+  </script>
+</html>

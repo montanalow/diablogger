@@ -1,0 +1,25 @@
+body, table, tbody, thead, tfoot, tr, td, div, h1, h2, h3, h4, h5, h6, p, img, ul, li{padding:0; margin:0; border:0}
+ul, ol {list-style-type:none}
+body{font-family:"Trebuchet MS",Arial,sans-serif; font-size:14px; line-height:18px}
+h1{font-size:36px; line-height:40px}
+h2{font-size:24px; line-height:28px}
+p{}
+a{color:#0044DD; text-decoration:none}
+a:hover{color:#0066FF; text-decoration:underline}
+input{display:block; margin:2px 0px}
+textarea{display:block; margin:2px 0px}
+
+body.index{background:#FFFFFF url('/images/home/bg.jpg') top center repeat-x}
+body.index h1{display:none}
+body.index div.content{width:1024px; height:768px; background:url('/images/home/bg.jpg') left top; margin:0 auto; position:relative}
+body.index a#start{display:block; position:absolute; top:271px; left:702px; width:198px; height:78px; background:url('/images/home/btn_yellow.gif'); color:#0033DD; text-align:center; padding-top:30px}
+body.index a#start:hover{color:#0077FF; background:url('/images/home/btn_yellow_hover.gif'); text-decoration:none}
+body.index ul#features li{position:absolute; top:10px; left:550px; width:317px; height:179px; color:#001166; z-index:1}
+body.index img#logo{position:absolute; top:0; left:50px}
+body.index img#cloud{position:absolute; top:0; left:445px}
+body.index img#cloud0{position:absolute; top:85px; left:333px}
+body.index img#cloud1{position:absolute; top:75px; left:373px}
+body.index img#cloud2{position:absolute; top:65px; left:413px}
+
+body.start input#headline{font-size:24px; width:600px}
+body.start textarea#content{width:600px; height:200px}
